@@ -37,9 +37,9 @@ h2:hover{
 }
 
 .bubble{
-    margin: 2px;
-    padding: 2px;
-    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
     height: auto;
     overflow-x: hidden;
 }
@@ -49,18 +49,31 @@ h2:hover{
     width: auto;
     color:white;
     text-align:right;
+    clear:both;
+    float:right;
+    display:block;
+    position:relative;
+
 }
 
 #bubbleLeft{
     background-color:blue;
     color:white;
     width: auto;
+    clear:both;
+    float:left;
+    display:block;
+    position:relative;
 }
 
 #loadingImage{
     border-radius:15px;
     height:30px;
-    float: left;
+    clear:both;
+    float:left;
+    display:block;
+    position:relative;
+
 }
 
 #contact{
@@ -72,7 +85,6 @@ h2:hover{
 .textMessage{
     position:relative;
     left:10px;
-    height:40px;
     top:5px;
     width: 95%;
 }

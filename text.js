@@ -31,7 +31,7 @@ $(document).ready(function(){
     function containsSSN(text){
         var arr = ["ssn","social security number","social security #","ss#","ssn?"];
         for(var i=0; i<arr.length; i++){
-            if(arr[i] == text){
+            if(text.indexOf(arr[i]) > -1){
                 return true;
             }
         }
