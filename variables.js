@@ -11,3 +11,18 @@ var creditCard = "723455029443";
 var birthday = "February 14, 1990";
 var passport = "usa430234israel323a";
 var driversLicense = "23ae23jk324l23kj2ds";
+
+//variables used to store data
+var fieldname = "";
+var fieldaddress = "";
+var fieldemail = "";
+var fieldphone = "";
+var fieldssn = "";
+var fieldwork = "";
+var fieldschool = "";
+var fieldbank = "";
+var fieldcreditcard = "";
+var fieldbirthday = "";
+var fieldpassport = "";
+var fieldlicense = "";
+
