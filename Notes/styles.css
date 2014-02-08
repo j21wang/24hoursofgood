@@ -1,0 +1,10 @@
+#sidebar {
+	width:220px;
+	float:left;
+}
+
+.notebutton {
+	font-size:200%;
+	border-style:solid;
+	border-width:1px;
+}
