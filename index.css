@@ -237,7 +237,7 @@ h2:hover{
     width: 340px;
     height: 50px;
     border: 1px solid grey;
-    background-color:DarkGrey;
+    background-color:white;
     position: relative; 
     top:50px;
     font-color:white;
@@ -290,19 +290,35 @@ h2:hover{
 .amazonbutton{
 	width:370px;
 	height:70px;
-	font-size:200%;
+	font-size:24px;
 	text-align:center;
+    cursor:pointer;
+}
+
+.amazonbutton:hover{
+    color:#008cba;
+    cursor:pointer;
 }
 
 .backbutton{
 	width:370px;
 	height:70px;
 	font-size:150%;
+    cursor:pointer;
+    margin: 5px;
+}
+
+.backbutton:hover{
+    color:#008cba;
+    cursor:pointer;
+
 }
 
 .orderinfo{
 	width:370px;
 	height:100px;
+    position:relative;
+    left:5px;
 }
 
 tr:hover{
@@ -326,12 +342,26 @@ th{
 }
 
 .notebutton{
-	height:75px;
 	width:370px;
-	font-size:200%;
+	font-size:24px;
+    margin-left:10px;
+    padding:0;
+    cursor:pointer;
+}
+
+.notebutton:hover{
+    color:#008cba;
+    cursor:pointer;
 }
 
 #wrapper{
     position:relative;
     bottom:150px;
 }
+
+#wrapNote{
+    background-color: #E6DD93;
+    height:100%;
+}
+
+
