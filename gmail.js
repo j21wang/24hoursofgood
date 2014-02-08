@@ -151,7 +151,7 @@ e_19.title = "Tall, Busty Afro-Latina In San Francisco Seeking Travelling Irish 
 e_19.body = "Tall, Busty Afro-Latina In San Francisco Seeking Travelling Irish Man  Chicago";
 spamEmails[19] = e_19;
 var e_20 = new Object();
-e_20.from = "mr-davieswalkermr-prom01@live.com";
+e_20.from = "mr-davieswalker@live.com";
 e_20.title = "The Breasts Of Lindsay Lohan";
 e_20.body = "The Breasts Of Lindsay Lohan";
 spamEmails[20] = e_20;
@@ -161,7 +161,7 @@ e_21.title = "The 8th wonder of the world in your pants";
 e_21.body = "The 8th wonder of the world in your pants";
 spamEmails[21] = e_21;
 var e_22 = new Object();
-e_22.from = "drgilbertblair_unionbkfundsplc@hotmail.co.uk";
+e_22.from = "drgilbertblai@hotmail.co.uk";
 e_22.title = "Eat her then Take her";
 e_22.body = "Eat her then Take her";
 spamEmails[22] = e_22;
@@ -248,14 +248,15 @@ spamEmails.splice(2,0, e_rutgers);
 
 function showEmail(e)
 {
+	var prefix = "<input onclick=\"showInbox()\" type=\"submit\" value=\"Go back...\"><br><br>";
 	if (e == -1)
-		document.getElementById("screen").innerHTML=e_fafsa.body;
+		document.getElementById("screen").innerHTML=prefix+e_fafsa.body;
 	else if (e == -2)
-		document.getElementById("screen").innerHTML=e_boss.body;
+		document.getElementById("screen").innerHTML=prefix+e_boss.body;
 	else if (e == -3)
-		document.getElementById("screen").innerHTML=e_birthright.body;
+		document.getElementById("screen").innerHTML=prefix+e_birthright.body;
 	else
-		document.getElementById("screen").innerHTML=spamEmails[e].body;
+		document.getElementById("screen").innerHTML=prefix+spamEmails[e].body;
 }
 
 
@@ -263,8 +264,8 @@ function showInbox()
 {
 	var inbox = "";
 	for (var i=0; i < spamEmails.length; i++) {
-        var index = spamEmails[i].title.substring(0,15);
-		inbox = inbox + "<tr onclick=\"showEmail("+i+")\"><td>"+spamEmails[i].from+"</td><td>"+index+"...</td></tr>";
+        var index = spamEmails[i].title.substring(0,30);
+		inbox = inbox + "<tr onclick=\"showEmail("+i+")\"><td>"+spamEmails[i].from.substring(0,15)+"</td><td>"+index+"...</td></tr>";
 	}
 	var wholehtml = "<center><h1>Inbox<h1></center><table><tr><th>Sender</th><th>Subject Line</th></tr>"+inbox+"</table>";
 	document.getElementById("screen").innerHTML=wholehtml;
