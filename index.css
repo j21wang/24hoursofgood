@@ -16,3 +16,57 @@
     border-radius:5px;
 }
 
+#textsBox{
+    overflow-y: scroll;
+    height: 350px;
+    width: 350px;
+    border: thin solid black;
+    position: relative;
+    left:10px;
+}
+
+.bubble{
+    margin: 2px;
+    padding: 2px;
+    border-radius: 10px;
+    height: auto;
+    overflow-x: hidden;
+}
+
+#bubbleRight{
+    width: 100px;
+    border: thin solid black;
+    float: right;
+}
+
+#bubbleLeft{
+    border: thin solid black;
+    width: 100px;
+    float: left;
+}
+
+#loadingImage{
+    border-radius:15px;
+    height:30px;
+    float: left;
+}
+
+#contact{
+    margin:0;
+    position:relative;
+    left:150px;
+}
+
+.textMessage{
+    position:relative;
+    left:10px;
+    width:345px;
+    height:40px;
+    top:5px;
+}
+
+.send{
+    position:relative;
+    left:315px;
+    top:8px;
+}
