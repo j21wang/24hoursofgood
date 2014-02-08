@@ -137,7 +137,7 @@
 							var d = new Date();
 							var ms = d.getTime();
 							var sec = ms/1000;
-							sec = startTime - sec;
+							sec = Math.floor(sec - startTime);
 							alert("It took you "+sec+" seconds to steal "+name+"'s identity. REMEMBER TO LOCK YOUR PHONE!");
 							location.reload();
 						}
