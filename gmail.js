@@ -279,12 +279,12 @@ function showImportant()
 
 function showDrafts()
 {
-	var wholehtml = prefix+"<center><h1>Drafts</h1></center><br><table><tr><th>Sender</th><th>Subject Line</th></tr><tr><td onclick=\"showEmail(-2)\">"+e_boss.from+"</td><td>"+e_boss.title+"</td></tr></table>";
+	var wholehtml = prefix+"<center><h1>Drafts</h1></center><br><table><tr><th>Sender</th><th>Subject Line</th></tr><tr onclick=\"showEmail(-2)\"><td>"+e_boss.from+"</td><td>"+e_boss.title+"</td></tr></table>";
 	document.getElementById("screen").innerHTML=wholehtml;
 }
 
 function showSent()
 {
-	var wholehtml = prefix+"<center><h1>Sent Emails</h1></center><br><table><tr><th>Sender</th><th>Subject Line</th></tr><tr><td onclick=\"showEmail(-3)\">"+e_birthright.from+"</td><td>"+e_birthright.title+"</td></tr></table>";
+	var wholehtml = prefix+"<center><h1>Sent Emails</h1></center><br><table><tr><th>Sender</th><th>Subject Line</th></tr><tr onclick=\"showEmail(-3)\"><td>"+e_birthright.from+"</td><td>"+e_birthright.title+"</td></tr></table>";
 	document.getElementById("screen").innerHTML=wholehtml;
 }
