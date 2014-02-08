@@ -107,3 +107,7 @@ function passwordScreen(){
 function loadInstructions(){
 	$("#screen").html("<center><h1>Instructions</h1></center><br><br>You have found a phone that isn't locked! Go through the various apps and find information about the phone's previous owner to steal his/her identity! Gather up the required information as quickly as possible; you are being timed! <br><br>While on the hunt for information, fill out your notepage and keep it updated as you hunt. <br><br>To open and close your notepage, press the <img src=\"Images/fields.jpg\"> button. Good luck and remember that this could one day be YOUR phone!");
 }
+
+function loadFinalPage(){
+    $("#screen").html("<img id='final' src='Images/finaltips.jpg'>");
+}
