@@ -14,7 +14,7 @@ $(document).ready(function(){
             } else if(containsSSN(text.toLowerCase())){
                 $("#textsBox").append("<div id='bubbleLeft' class='bubble'>you asked me already...</div>");
             } else {
-                var momArr = ["i love u","how's it going?","i miss u","where r u?"];
+                var momArr = ["i love u","how's it going?","i miss u","where r u?","come back home 2nite","i want 2 c u","why don't u call me more?","did you eat yet?","dad says hi"];
                 $("#textsBox").append("<div id='bubbleLeft' class='bubble'>"+momArr[getRandomNum(0,momArr.length-1)]+"</div>");
             }
             scrollDown();
@@ -30,7 +30,7 @@ $(document).ready(function(){
     }
 
     function containsSSN(text){
-        var arr = ["ssn","social security number","social security #","ss#","ssn?"];
+        var arr = ["ssn","social security number","social security #","ss#","ssn?","social security","social"];
         for(var i=0; i<arr.length; i++){
             if(text.indexOf(arr[i]) > -1){
                 return true;
