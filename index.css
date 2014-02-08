@@ -24,12 +24,13 @@ h2:hover{
     top:60px;
     border-radius:5px;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #textsBox{
     overflow-y: scroll;
     height: 350px;
-    width: 350px;
+    width: 96%;
     border: thin solid black;
     position: relative;
     left:10px;
@@ -44,15 +45,16 @@ h2:hover{
 }
 
 #bubbleRight{
-    width: 100px;
-    border: thin solid black;
-    float: right;
+    background-color:blue;
+    width: auto;
+    color:white;
+    text-align:right;
 }
 
 #bubbleLeft{
-    border: thin solid black;
-    width: 100px;
-    float: left;
+    background-color:blue;
+    color:white;
+    width: auto;
 }
 
 #loadingImage{
@@ -70,15 +72,15 @@ h2:hover{
 .textMessage{
     position:relative;
     left:10px;
-    width:345px;
     height:40px;
     top:5px;
+    width: 95%;
 }
 
 .send{
     position:relative;
-    left:315px;
-    top:8px;
+    float:right;
+    top:5px;
 }
 
 #profile {

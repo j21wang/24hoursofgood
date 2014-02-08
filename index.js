@@ -1,5 +1,5 @@
 function textScreen(){
-    $("#screen").html("<h1 id='contact'>Mom</h1><div id='textsBox'></div><input type='text' name='textMessage' class='textMessage' autocomplete='off'><button class='send'>Send</button><script src='text.js'></script>");
+    $("#screen").html("<h1 id='contact'>Mom</h1><div id='textsBox'></div><input type='text' name='textMessage' class='textMessage' autocomplete='off'><button class='send'>Send</button>");
 }
 
 function gmailScreen(){
@@ -29,7 +29,11 @@ function photosScreen(){
     $("#screen").html("<table><tr><td><img class='photo' src='photos/1.jpg'><td><img class='photo' src='photos/2.jpg'><td><img class='photo' src='photos/3.jpg'><td><img class='photo' src='photos/3.jpg'></tr><tr><td><img class='photo' src='photos/4.jpg'><td><img class='photo' src='photos/5.jpg'><td><img class='photo' src='photos/6.jpg'><td><img class='photo' src='photos/7.jpg'></tr><tr><td><img class='photo' src='photos/8.jpg'><td><img class='photo' src='photos/9.jpg'><td><img class='photo' src='photos/10.jpg'><td><img class='photo' src='photos/11.jpg'></tr><tr><td><img class='photo' src='photos/12.jpg'><td><img class='photo' src='photos/21.jpg'><td><img class='photo' src='photos/22.jpg'><td><img class='photo' src='photos/23.jpg'></tr><tr><td><img class='photo' src='photos/24.jpg'><td><img class='photo' src='photos/25.jpg'><td><img class='photo' src='photos/26.jpg'><td><img class='photo' src='photos/27.jpg'></tr><tr><td><img class='photo' src='photos/28.jpg'><td><img class='photo' src='photos/29.jpg'><td><img class='photo' src='photos/30.jpg'><td><img class='photo' src='photos/32.jpg'></tr><!--<tr><td><img class='photo' src='photos/33.jpg'><td><img class='photo' src='photos/34.jpg'><td><img class='photo' src='photos/35.jpg'><td><img class='photo' src='photos/36.jpg'></tr>--></table>");
 }
 
+<<<<<<< HEAD
 function boaScreen(){
     $("#screen").html("<div style=\"background-color:red\"><img src=\"Images/boa_logo.png\" width=\"100%\"><h2>Hello<i>"+name+"</i></h2><br><br><h3>Bank Account Information:</h3><h5> "+bankAccount+"</h5><br><br><h3>Credit Card Information</h3><h5>"+creditCard+"</h5></div>");
 
 }
+=======
+textScreen();
+>>>>>>> c9ca7a3d8765bb38eada34cfa8cfa2ca15de28f8
