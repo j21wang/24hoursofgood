@@ -15,6 +15,15 @@
 						float:left;
 						width:15px;
 					}
+					#submitFields {
+						display:none; 
+						position:absolute; 
+						top:110px; left:60px; 
+						height:400px; 
+						width:300px; 
+						border:1px solid black;
+						background-color:white;
+					}
 				</style>
         <script src="jquery.js"></script>
         <script src="variables.js"></script>
@@ -130,7 +139,7 @@
                 <a href="#">Call</a>
                 <a href="text.html">Text</a>-->
             </div>
-						<div id="submitFields" style="display:none; position:absolute; top:110px; left:60px; height:400px; width:300px; border:1px solid black">
+						<div id="submitFields">
 							<div id="checkname" class="check"><img src="Images/check.png" class="checkimage"></div><b>Name:</b> <input type="text" id="fieldname" size="20"><br>
 							<div id="checkaddress" class="check"><img src="Images/check.png" class="checkimage"></div><b>Address:</b> <input type="text" id="fieldaddress" size="15"><br>
 							<div id="checkemail" class="check"><img src="Images/check.png" class="checkimage"></div><b>Email:</b> <input type="text" id="fieldemail" size="20"><br>
