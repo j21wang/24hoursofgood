@@ -23,7 +23,6 @@ function loadScript(url){
     var script = document.createElement('script');
     script.type = 'text/javascript';
     script.src = url;
-
     head.appendChild(script);
 }
 
@@ -44,10 +43,10 @@ function gPlusScreen(){
 
 function settingsScreen(){
 
-    $("#screen").html("<img id='about' src='Images/iphone-general-settings.gif' align='left'/><img id='passlock' src='Images/settings.gif'/>");
+    $("#screen").html("<div style='background-color:lightGrey'><img id='about' src='Images/iphone-general-settings.gif' align='left'/><img id='passlock' src='Images/settings.gif'/></div>");
     $("#about").click(function(){
-        $("#screen").html("<div class='boxi' id='Name'></div><div class='boxi' id='Network'>Network: AT&T</div><div class='boxi' id='Model'>Model: M876E2</div><div class='boxi' id='SerialNumber'>Serial Number: FIHUESR38947Y2QY98</div>");
-        $("#Name").text("Name: "+name+ "'s Phone");
+        $("#screen").html("<center><h1 style='position:relative; top:20px;'>Phone Information</h1><div class='boxi' id='Name'><br></div><div class='boxi' id='Network'><br>Network: AT&T</div><div class='boxi' id='Model'><br>Model: M876E2</div><div class='boxi' id='SerialNumber'><br>Serial Number: FIHUESR38947Y2QY98</div></center>");
+        $("#Name").html("<br>Name: "+name+ "'s Phone");
     });
     $("#passlock").click(function(){
         $("#screen").html("<div class='boxl' id='Passlock'>Turn Passlock On</div><div class='boxl' id='Changepass'>Change Passcode</div>");
@@ -80,7 +79,7 @@ function notesScreen(){
 	$("#screen").html("<div id='sidebar'><div id='note0' class='notebutton' onclick='displayNote(0)'>Wifi Password</div><div id='note1' class='notebutton' onclick='displayNote(1)'>To do list</div><div id='note2' class='notebutton' onclick='displayNote(2)'>My least favorite people</div><div id='note3' class='notebutton' onclick='displayNote(3)'>Passwords</div><div id='note4' class='notebutton' onclick='displayNote(4)'>Books to read</div><div id='note5' class='notebutton' onclick='displayNote(5)'>Dreams</div><div id='note6' class='notebutton' onclick='displayNote(6)'>Basketball</div><div id='note7' class='notebutton' onclick='displayNote(7)'>Groceries</div></div>");
 }
 
-gPlusScreen();
+settingsScreen();
 function openAccount(){
 	$("#screen").html("<div class='backbutton' onclick='amazonScreen()'>Back</div><br><div>Account Settings</div><br><div>Payment Methods</div><br><div>Personalized Content</div>");
 }
