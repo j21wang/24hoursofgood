@@ -82,8 +82,7 @@ function notesScreen(){
 	$("#screen").html("<div style='background-color:#E6DD93; height:490px;position:relative; bottom:15px'><center><h1 style='color:red'>Notes</h1></center><hr><div id='sidebar'><div id='note0' class='notebutton' onclick='displayNote(0)'>Wifi Password</div><div id='note1' class='notebutton' onclick='displayNote(1)'><hr>To do list</div><div id='note2' class='notebutton' onclick='displayNote(2)'><hr>My least favorite people</div><div id='note3' class='notebutton' onclick='displayNote(3)'><hr>Passwords<hr></div><div id='note4' class='notebutton' onclick='displayNote(4)'>Books to read</div><div id='note5' class='notebutton' onclick='displayNote(5)'><hr>Dreams</div><div id='note6' class='notebutton' onclick='displayNote(6)'><hr>Basketball</div><div id='note7' class='notebutton' onclick='displayNote(7)'><hr>Groceries</div></div></div>");
 }
 
-//loadCover();
-loadFinalPage();
+loadCover();
 function loadCover(){
     $("#screen").html("<div ><img src='cover.jpg' style='height:410px; position:relative;left:10px;top:10px;'><img onclick='loadHome();' style='position:relative; bottom:40px; left:20px;' src='playButton.jpg'><img style='position:relative;bottom:40px;left:30px;' src='rulesButton.jpg' onclick=\"loadInstructions()\"></div>");
 }
