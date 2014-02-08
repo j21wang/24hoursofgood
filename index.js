@@ -26,20 +26,23 @@ function loadScript(url){
     head.appendChild(script);
 }
 
+
 function gmailScreen(){
     $("#screen").html("<br><br><center><h1>My Emails</h1><hr><h2 onclick='showInbox()'>Inbox</h2><h2 onclick='showImportant()'>Important</h2><h2 onclick='showSent()'>Sent Mail</h2><h2 onclick='showDrafts()'>Drafts</h2><h2>More</h2></center>");
 }
 
 function gPlusScreen(){
-    $("#screen").html("<div id='screenWrap'><center><img id='profile' src='Images/GooglePlusIcon.jpg' /><img id='background' src='Images/GooglePlusBackground.jpg'/><div class='cont'><div class='box' id='name'></div><br><br></div></center><div id='wrapper'><div class='boxed' id='mystory'><h3 style='margin:0'>About Me</h3><br><b>Tagline</b><br>The kid who never grew up.<br><br><b>Bragging Rights</b><br>Never age, own an island called Neverland, leader of Lost Boys.</div><div class='boxed' id='work'></div><div class='boxed' id='contactinfo'></div><div class='boxed' id='basicinfo'></div><div class='boxed' id='school'></div></div><div class='click>Identity Collection</div></div></div>");
+    $("#screen").html("<div id='screenWrap'><center><img id='profile' src='Images/GooglePlusIcon.jpg' /><img id='background' src='Images/GooglePlusBackground.jpg'/><div class='cont'><div class='box' id='name'></div><br><br></div></center><div id='wrapper'><div class='boxed' id='mystory'><h3 style='margin:0'>About Me</h3><br><b>Tagline</b><br>The kid who never grew up.<br><br><b>Bragging Rights</b><br>Never age, own an island called Neverland, leader of Lost Boys.</div><br><div class='boxed' id='work'></div><br><div class='boxed' id='contactinfo'></div><br><div class='boxed' id='basicinfo'></div><br><div class='boxed' id='school'></div></div>");
 
     $("#name").html("<h2>"+name+"</h2>");
-    $("#work").html("Work: <br>"+work);
-    $("#contactinfo").text("Contact Information: "+phone);
-    $("#basicinfo").text("Basic Information: "+birthday);
-    $("#school").text("Education: "+school);
+    $("#work").html("<h3 style='margin:0'>Work</h3><br>"+"<h4 style='margin:0'>Occupation</h4>"+work+" Software Engineer");
+    $("#contactinfo").html("<h3 style='margin:0'>Contact Information</h3><br> <h4 style='margin:0'>Cell Number</h4>" +phone);
+    $("#basicinfo").html("<h3 style='margin:0'>Basic Information</h3><br>"+"<h4 style='margin:0'>DOB</h4>"+birthday);
+    $("#school").html("<h3 style='margin:0'>Education</h3><br>" +"<h4 style='margin:0'>College</h4>" +school);
 
 }
+
+
 
 function settingsScreen(){
 
@@ -68,7 +71,7 @@ function openOrders() {
 }
 
 function viewOrder(orderNum) {
-	$("#screen").html("<div class='backbutton' onclick='openOrders()'>Back</div><div>Order Date: 2/1/2013<br>Order #: 22222222<br>Order Total: $333.33<br>Ship To:<br>0 Never Landing<br>Never, Never Land</div>");
+	$("#screen").html("<div class='backbutton' onclick='openOrders()'>Back</div><div>Order Date: 2/1/2013<br>Order #: 22222222<br>Order Total: $333.33<br>Ship To:<br>"+address+"</div>");
 }
 
 function boaScreen(){
