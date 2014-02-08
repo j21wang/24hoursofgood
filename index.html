@@ -15,6 +15,15 @@
 						float:left;
 						width:15px;
 					}
+					#submitFields {
+						display:none; 
+						position:absolute; 
+						top:110px; left:60px; 
+						height:400px; 
+						width:300px; 
+						border:1px solid black;
+						background-color:white;
+					}
 				</style>
         <script src="jquery.js"></script>
         <script src="variables.js"></script>
@@ -62,75 +71,87 @@
 						var fieldpassport = document.getElementById("fieldpassport").value;
 						var fieldlicense = document.getElementById("fieldlicense").value;
 						
-						if (fieldname == name)
+						var count = 0;
+						if (fieldname == name) {
 							document.getElementById("checkname").style.display="block";
-						else
+							count++;
+						} else
 							document.getElementById("checkname").style.display="none";
-						if (fieldaddress == address)
+						if (fieldaddress == address) {
 							document.getElementById("checkaddress").style.display="block";
-						else
+							count++;
+						} else
 							document.getElementById("checkaddress").style.display="none";
-						if (fieldemail == email)
+						if (fieldemail == email) {
 							document.getElementById("checkemail").style.display="block";
-						else
+							count++;
+						} else
 							document.getElementById("checkemail").style.display="none";
-						if (fieldphone == phone)
+						if (fieldphone == phone) {
 							document.getElementById("checkphone").style.display="block";
-						else
+							count++;
+						} else
 							document.getElementById("checkphone").style.display="none";
-						if (fieldssn == ssn)
+						if (fieldssn == ssn) {
 							document.getElementById("checkssn").style.display="block";
-						else
+							count++;
+						} else
 							document.getElementById("checkssn").style.display="none";
-						if (fieldwork == work)
+						if (fieldwork == work) {
 							document.getElementById("checkwork").style.display="block";
-						else
+							count++;
+						} else
 							document.getElementById("checkwork").style.display="none";
-						if (fieldschool == school)
+						if (fieldschool == school) {
 							document.getElementById("checkschool").style.display="block";
-						else
+							count++;
+						} else
 							document.getElementById("checkschool").style.display="none";
-						if (fieldbank == bankAccount)
+						if (fieldbank == bankAccount) {
 							document.getElementById("checkbank").style.display="block";
-						else
+							count++;
+						} else
 							document.getElementById("checkbank").style.display="none";
-						if (fieldcreditcard == creditCard)
+						if (fieldcreditcard == creditCard) {
 							document.getElementById("checkcreditcard").style.display="block";
-						else
+							count++;
+						} else
 							document.getElementById("checkcreditcard").style.display="none";
-						if (fieldbirthday == birthday)
+						if (fieldbirthday == birthday) {
 							document.getElementById("checkbirthday").style.display="block";
-						else
+							count++;
+						} else
 							document.getElementById("checkbirthday").style.display="none";
-						if (fieldpassport == passport)
+						if (fieldpassport == passport) {
 							document.getElementById("checkpassport").style.display="block";
-						else
+							count++;
+						} else
 							document.getElementById("checkpassport").style.display="none";
-						if (fieldlicense == driversLicense)
+						if (fieldlicense == driversLicense) {
 							document.getElementById("checklicense").style.display="block";
-						else
+							count++;
+						} else
 							document.getElementById("checklicense").style.display="none";
+
+						if (count == 12) {// all fields are correct
+							var d = new Date();
+							var ms = d.getTime();
+							var sec = ms/1000;
+							sec = startTime - sec;
+							alert("It took you "+sec+" seconds to steal "+name+"'s identity. REMEMBER TO LOCK YOUR PHONE!");
+							location.reload();
+						}
 					}
 				</script>
 
-    </head>
-    <body>
-		<img src="Images/homebutton.png" onclick="loadHome()" style="position:absolute; top:560px; left:190px; width:50px; z-index:10;">
-		<img src="Images/fields.jpg" onclick="showSubmitFields()" style="position:absolute; top:560px; left:350px; width:50px; z-index:10;">
-        <div id="container">
-            <div id="screen">
-                <!--<a href="#">Google+</a>
-                <a href="#">Email</a>
-                <a href="#">Bank of America</a>
-                <a href="#">Amazon</a>
-                <a href="#">System Settings</a>
-                <a href="#">Notes</a>
-                <a href="#">Photos</a>
-                <a href="#">Contacts</a>
-                <a href="#">Call</a>
-                <a href="text.html">Text</a>-->
+				</head>
+				<body>
+				<img src="Images/homebutton.png" onclick="loadHome()" style="position:absolute; top:560px; left:190px; width:50px; z-index:10;">
+				<img src="Images/fields.jpg" onclick="showSubmitFields()" style="position:absolute; top:560px; left:350px; width:50px; z-index:10;">
+				<div id="container">
+					<div id="screen">
             </div>
-						<div id="submitFields" style="display:none; position:absolute; top:110px; left:60px; height:400px; width:300px; border:1px solid black">
+						<div id="submitFields">
 							<div id="checkname" class="check"><img src="Images/check.png" class="checkimage"></div><b>Name:</b> <input type="text" id="fieldname" size="20"><br>
 							<div id="checkaddress" class="check"><img src="Images/check.png" class="checkimage"></div><b>Address:</b> <input type="text" id="fieldaddress" size="15"><br>
 							<div id="checkemail" class="check"><img src="Images/check.png" class="checkimage"></div><b>Email:</b> <input type="text" id="fieldemail" size="20"><br>
