@@ -84,7 +84,7 @@ function notesScreen(){
 
 loadCover();
 function loadCover(){
-    $("#screen").html("<div ><img src='cover.jpg' style='height:410px; position:relative;left:10px;top:10px;'><img onclick='loadHome();' style='position:relative; bottom:40px; left:20px;' src='playButton.jpg'><img style='position:relative;bottom:40px;left:30px;' src='rulesButton.jpg'></div>");
+    $("#screen").html("<div ><img src='cover.jpg' style='height:410px; position:relative;left:10px;top:10px;'><img onclick='loadHome();' style='position:relative; bottom:40px; left:20px;' src='playButton.jpg'><img style='position:relative;bottom:40px;left:30px;' src='rulesButton.jpg' onclick=\"loadInstructions()\"></div>");
 }
 
 function openAccount(){
@@ -102,4 +102,8 @@ function changePassword() {
 
 function passwordScreen(){
 	$("#screen").html("<center><h1>Password Manager</h1><br><i>Change the password for all your apps from one simple to use app.</i><br><br><b>New Password:</b><input type=\"text\" id=\"newpass\"><input type=\"submit\" value=\"Change Password\" onclick=\"changePassword()\"><br><br><br><div id=\"passChangedSuccess\" style=\"color:green; display:none\">The password was changed successfully!</div></center>");
+}
+
+function loadInstructions(){
+	$("#screen").html("<center><h1>Instructions</h1></center><br><br>You have found a phone that isn't locked! Go through the various apps and find information about the phone's previous owner to steal his/her identity! Gather up the required information as quickly as possible; you are being timed! <br><br>While on the hunt for information, fill out your notepage and keep it updated as you hunt. <br><br>To open and close your notepage, press the <img src=\"Images/fields.jpg\"> button. Good luck and remember that this could one day be YOUR phone!");
 }
