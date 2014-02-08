@@ -29,10 +29,13 @@ function photosScreen(){
     $("#screen").html("<table><tr><td><img class='photo' src='photos/1.jpg'><td><img class='photo' src='photos/2.jpg'><td><img class='photo' src='photos/3.jpg'><td><img class='photo' src='photos/3.jpg'></tr><tr><td><img class='photo' src='photos/4.jpg'><td><img class='photo' src='photos/5.jpg'><td><img class='photo' src='photos/6.jpg'><td><img class='photo' src='photos/7.jpg'></tr><tr><td><img class='photo' src='photos/8.jpg'><td><img class='photo' src='photos/9.jpg'><td><img class='photo' src='photos/10.jpg'><td><img class='photo' src='photos/11.jpg'></tr><tr><td><img class='photo' src='photos/12.jpg'><td><img class='photo' src='photos/21.jpg'><td><img class='photo' src='photos/22.jpg'><td><img class='photo' src='photos/23.jpg'></tr><tr><td><img class='photo' src='photos/24.jpg'><td><img class='photo' src='photos/25.jpg'><td><img class='photo' src='photos/26.jpg'><td><img class='photo' src='photos/27.jpg'></tr><tr><td><img class='photo' src='photos/28.jpg'><td><img class='photo' src='photos/29.jpg'><td><img class='photo' src='photos/30.jpg'><td><img class='photo' src='photos/32.jpg'></tr><!--<tr><td><img class='photo' src='photos/33.jpg'><td><img class='photo' src='photos/34.jpg'><td><img class='photo' src='photos/35.jpg'><td><img class='photo' src='photos/36.jpg'></tr>--></table>");
 }
 
+<<<<<<< HEAD
 
 
 
 settingsScreen();
+=======
+>>>>>>> 8c078df7c8f16cc1fd15dfcf9f68f36e67de4d0c
 function amazonScreen(){
 	$("#screen").html("<div class='amazonbutton' onclick='openAccount()'>Your Account</div><br><div class='amazonbutton' onclick='openCart()'>Shopping Cart</div><br><div class='amazonbutton' onclick='openOrders()'>Orders</div>");
 }
@@ -46,7 +49,7 @@ function viewOrder(orderNum) {
 }
 
 function boaScreen(){
-    $("#screen").html("<div style=\"background-color:red\"><img src=\"Images/boa_logo.png\" width=\"100%\"><h2>Hello<i>"+name+"</i></h2><br><br><h3>Bank Account Information:</h3><h5> "+bankAccount+"</h5><br><br><h3>Credit Card Information</h3><h5>"+creditCard+"</h5></div>");
+    $("#screen").html("<div id='strip'></div><div id='boa'><img src=\"Images/boa_logo.png\" width=\"100%\"><center><h1>Hello<i>, "+name+"</i></h1><h3>Account Number: "+bankAccount+"</h3><h3>Credit Card Number: "+creditCard+"</h3><hr><h3>Savings Account Balance: $10002.39</h3><h3>Checkings Account Balance: $244.34</h3></center></div>");
 
 }
 
