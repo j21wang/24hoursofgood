@@ -200,7 +200,6 @@ e_29.from = "mrscherryflawer.anderson@yahoo.com";
 e_29.title = "We know the method to win.";
 e_29.body = "We know the method to win.";
 spamEmails[29] = e_29;
- there!
 var e_30 = new Object();
 e_30.from = "david_tagro@hotmail.fr";
 e_30.title = "Is it violence or an Eternal Truth?";
