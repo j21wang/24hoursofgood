@@ -5,7 +5,7 @@ var passChanged = false;
 
 var name = "Peter Pan";
 var address = "12 Nananana Drive";
-var email = "ppee@gmail.com";
+var email = "me@thisisme.com";
 var emailPass = "spongebob"
 var phone = "732 552 6821";
 var ssn = "083 12 1723";
