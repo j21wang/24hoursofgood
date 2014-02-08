@@ -1,10 +1,3 @@
-<html>
-<head>
-	<title>Gmail</title>
- <script src="variables.js"></script>
-<script type="text/javascript">
-
-
 var e_fafsa = new Object();
 e_fafsa.from = "noreply@fafsa.ed.gov";
 e_fafsa.title = "You fafsa statement for 2013-2014 (IMPORTANT)";
@@ -256,13 +249,13 @@ spamEmails.splice(2,0, e_rutgers);
 function showEmail(e)
 {
 	if (e == -1)
-		document.getElementById("body").innerHTML=e_fafsa.body;
+		document.getElementById("screen").innerHTML=e_fafsa.body;
 	else if (e == -2)
-		document.getElementById("body").innerHTML=e_boss.body;
+		document.getElementById("screen").innerHTML=e_boss.body;
 	else if (e == -3)
-		document.getElementById("body").innerHTML=e_birthright.body;
+		document.getElementById("screen").innerHTML=e_birthright.body;
 	else
-		document.getElementById("body").innerHTML=spamEmails[e].body;
+		document.getElementById("screen").innerHTML=spamEmails[e].body;
 }
 
 
@@ -272,43 +265,24 @@ function showInbox()
 	for (var i=0; i < spamEmails.length; i++) {
 		inbox = inbox + "<tr onclick=\"showEmail("+i+")\"><td>"+spamEmails[i].from+"</td><td>"+spamEmails[i].title+"</td></tr>";
 	}
-	var wholehtml = "<h2>Inbox</h2><table><tr><th>Sender</th><th>Subject Line</th></tr>"+inbox+"</table>";
-	document.getElementById("body").innerHTML=wholehtml;
+	var wholehtml = "Inbox<table><tr><th>Sender</th><th>Subject Line</th></tr>"+inbox+"</table>";
+	document.getElementById("screen").innerHTML=wholehtml;
 }
 
 function showImportant()
 {
-	var wholehtml = "<h2>Important Emails</h2><br><table><tr><th>Sender</th><th>Subject Line</th></tr><tr><td onclick=\"showEmail(-1)\">"+e_fafsa.from+"</td><td>"+e_fafsa.title+"</td></tr></table>";
-	document.getElementById("body").innerHTML=wholehtml;
+	var wholehtml = "Important Emails<br><table><tr><th>Sender</th><th>Subject Line</th></tr><tr><td onclick=\"showEmail(-1)\">"+e_fafsa.from+"</td><td>"+e_fafsa.title+"</td></tr></table>";
+	document.getElementById("screen").innerHTML=wholehtml;
 }
 
 function showDrafts()
 {
-	var wholehtml = "<h2>Drafts</h2><br><table><tr><th>Sender</th><th>Subject Line</th></tr><tr><td onclick=\"showEmail(-2)\">"+e_boss.from+"</td><td>"+e_boss.title+"</td></tr></table>";
-	document.getElementById("body").innerHTML=wholehtml;
+	var wholehtml = "Drafts<br><table><tr><th>Sender</th><th>Subject Line</th></tr><tr><td onclick=\"showEmail(-2)\">"+e_boss.from+"</td><td>"+e_boss.title+"</td></tr></table>";
+	document.getElementById("screen").innerHTML=wholehtml;
 }
 
 function showSent()
 {
-	var wholehtml = "<h2>Sent Emails</h2><br><table><tr><th>Sender</th><th>Subject Line</th></tr><tr><td onclick=\"showEmail(-3)\">"+e_birthright.from+"</td><td>"+e_birthright.title+"</td></tr></table>";
-	document.getElementById("body").innerHTML=wholehtml;
+	var wholehtml = "Sent Emails<br><table><tr><th>Sender</th><th>Subject Line</th></tr><tr><td onclick=\"showEmail(-3)\">"+e_birthright.from+"</td><td>"+e_birthright.title+"</td></tr></table>";
+	document.getElementById("screen").innerHTML=wholehtml;
 }
-
-</script>
-
-</head>
-<body>
-
-<h1>My Emails</h1>
-<div style="float:left; width:300px">
-	<h3 onclick="showInbox()">Inbox</h3>
-	<h3 onclick="showImportant()">Important</h3>
-	<h3 onclick="showSent()">Sent Mail</h3>
-	<h3 onclick="showDrafts()">Drafts</h3>
-	<h3>More (Unavailable)</h3>
-</div>
-<div id="body">
-	
-</div>
-</body>
-</html>
