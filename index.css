@@ -97,7 +97,6 @@ h2:hover{
 
 #profile {
     position: relative;
-    left:130px;
     width: 100px;
     height: 100px;
     top:100px;
@@ -107,29 +106,30 @@ h2:hover{
 
 #background {
     position: relative;
-
     width: 370px;
     height: 200px;
     bottom:105px;
     z-index: 1;
 }
 
+.cont{
+    position:relative;
+    bottom:80px;
+
+}
+
 .box{
   
-    width: 369px;
-    height: 50px;
-    
-    position: relative;
-    down: 20px;
-    
 
 
 }
 
+#menu{
+    display: inline;
+    list-style-type: none;
+}
+
 #name{
-    position: relative;
-    left: 105px;
-    bottom: 50px;
 
 }
 
@@ -144,8 +144,6 @@ h2:hover{
 
 }
 .tabs{
-    position: relative;
-    left:100px;
 
 }
 
