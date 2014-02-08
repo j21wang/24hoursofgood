@@ -1,3 +1,17 @@
+var notes = new Array();
+notes[0]="aaaaaaaaaaaaa";
+notes[1]="Go shopping<br>Watch TV<br>Fall in love";
+notes[2]="Mitt Romney";
+notes[3]="Amazon: monkey";
+notes[4]="Infinite Jest";
+notes[5]="";
+notes[6]="Kevin Durant is beautiful";
+notes[7]="Eggs, butter, sour patches";
+
+function displayNote(noteNum) {
+	$("#screen").html("<div class='backbutton' onclick='notesScreen()'>Back</div><br>"+notes[noteNum];
+}
+
 function textScreen(){
     $("#screen").html("<h1 id='contact'>Mom</h1><div id='textsBox'></div><input type='text' name='textMessage' class='textMessage' autocomplete='off'><button class='send'>Send</button>");
 }
