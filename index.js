@@ -13,7 +13,18 @@ function displayNote(noteNum) {
 }
 
 function textScreen(){
+
+    loadScript("text.js");
     $("#screen").html("<h1 id='contact'>Mom</h1><div id='textsBox'></div><input type='text' name='textMessage' class='textMessage' autocomplete='off'><button class='send'>Send</button>");
+}
+
+function loadScript(url){
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+
+    head.appendChild(script);
 }
 
 function gmailScreen(){
@@ -21,9 +32,9 @@ function gmailScreen(){
 }
 
 function gPlusScreen(){
-    $("#screen").html("<img id='profile' src='Images/GooglePlusIcon.jpg' /><img id='background' src='Images/GooglePlusBackground.jpg'/><div class='box' id='name'></div><div class='tabs'>About Posts Photos</div><div class='boxed' id='mystory'><h1>My Story</h1><h6>Tagline</h6><p>The kid who never grew up.</p><h6>Bragging Rights</h6><p>Never age, own an island called Neverland, leader of Lost Boys.</p></div><div class='boxed' id='address'></div><div class='boxed' id='work'></div><div class='boxed' id='contactinfo'></div><div class='boxed' id='basicinfo'></div><div class='boxed' id='school'></div><div class='click>Identity Collection</div></div>");
+    $("#screen").html("<center><img id='profile' src='Images/GooglePlusIcon.jpg' /><img id='background' src='Images/GooglePlusBackground.jpg'/><div class='cont'><div class='box' id='name'></div><br><br></div><div class='boxed' id='mystory'><h1>My Story</h1><h6>Tagline</h6><p>The kid who never grew up.</p><h6>Bragging Rights</h6><p>Never age, own an island called Neverland, leader of Lost Boys.</p></div><div class='boxed' id='address'></div><div class='boxed' id='work'></div><div class='boxed' id='contactinfo'></div><div class='boxed' id='basicinfo'></div><div class='boxed' id='school'></div><div class='click>Identity Collection</div></div></center>");
 
-    $("#name").text("Name: "+name);
+    $("#name").text(name);
     $("#address").text("Address: "+address);
     $("#work").text("Work: "+work);
     $("#contactinfo").text("Contact Information: "+phone);
@@ -50,10 +61,6 @@ function photosScreen(){
     $("#screen").html("<table><tr><td><img class='photo' src='photos/1.jpg'><td><img class='photo' src='photos/2.jpg'><td><img class='photo' src='photos/3.jpg'><td><img class='photo' src='photos/3.jpg'></tr><tr><td><img class='photo' src='photos/4.jpg'><td><img class='photo' src='photos/5.jpg'><td><img class='photo' src='photos/6.jpg'><td><img class='photo' src='photos/7.jpg'></tr><tr><td><img class='photo' src='photos/8.jpg'><td><img class='photo' src='photos/9.jpg'><td><img class='photo' src='photos/10.jpg'><td><img class='photo' src='photos/11.jpg'></tr><tr><td><img class='photo' src='photos/12.jpg'><td><img class='photo' src='photos/21.jpg'><td><img class='photo' src='photos/22.jpg'><td><img class='photo' src='photos/23.jpg'></tr><tr><td><img class='photo' src='photos/24.jpg'><td><img class='photo' src='photos/25.jpg'><td><img class='photo' src='photos/26.jpg'><td><img class='photo' src='photos/27.jpg'></tr><tr><td><img class='photo' src='photos/28.jpg'><td><img class='photo' src='photos/29.jpg'><td><img class='photo' src='photos/30.jpg'><td><img class='photo' src='photos/32.jpg'></tr><!--<tr><td><img class='photo' src='photos/33.jpg'><td><img class='photo' src='photos/34.jpg'><td><img class='photo' src='photos/35.jpg'><td><img class='photo' src='photos/36.jpg'></tr>--></table>");
 }
 
-
-
-
-settingsScreen();
 function amazonScreen(){
 	$("#screen").html("<div class='amazonbutton' onclick='openAccount()'>Your Account</div><br><div class='amazonbutton' onclick='openCart()'>Shopping Cart</div><br><div class='amazonbutton' onclick='openOrders()'>Orders</div>");
 }
@@ -74,4 +81,5 @@ function notesScreen(){
 	$("#screen").html("<div id='sidebar'><div id='note0' class='notebutton' onclick='displayNote(0)'>Wifi Password</div><div id='note1' class='notebutton' onclick='displayNote(1)'>To do list</div><div id='note2' class='notebutton' onclick='displayNote(2)'>My least favorite people</div><div id='note3' class='notebutton' onclick='displayNote(3)'>Passwords</div><div id='note4' class='notebutton' onclick='displayNote(4)'>Books to read</div><div id='note5' class='notebutton' onclick='displayNote(5)'>Dreams</div><div id='note6' class='notebutton' onclick='displayNote(6)'>Basketball</div><div id='note7' class='notebutton' onclick='displayNote(7)'>Groceries</div></div>");
 }
 
-notesScreen();
+gPlusScreen();
+

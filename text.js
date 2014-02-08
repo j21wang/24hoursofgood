@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    console.log("ehy");
     var asked = false;
     $(".send").click(function(){
         var text = $(".textMessage").val();
