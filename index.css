@@ -1,12 +1,28 @@
 #container{
+    border: 10px solid black;
+    width: 400px;
+    height:590px;
+    border-radius:15px;
+    background-color:black;
+}
 
+#screen{
+    background-color:white;
+    height:470px;
+    width:370px;
+    position:relative;
+    left:15px;
+    top:60px;
+    border-radius:5px;
 }
 
 #textsBox{
     overflow-y: scroll;
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
     border: thin solid black;
+    position: relative;
+    left:10px;
 }
 
 .bubble{
@@ -42,5 +58,15 @@
 }
 
 .textMessage{
+    position:relative;
+    left:10px;
+    width:345px;
+    height:40px;
+    top:5px;
+}
 
+.send{
+    position:relative;
+    left:315px;
+    top:8px;
 }

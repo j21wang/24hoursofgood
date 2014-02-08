@@ -1,20 +1,46 @@
 <!doctype html>
 <html>
     <head>
+        <link href="index.css" type="text/css" rel="stylesheet"></link>
+        <script src="jquery.js"></script>
+        <script src="variables.js"></script>
+        <script src="gmail.js"></script>
         <title>Identity Theft</title>
+
+
+				<script>
+					fieldsDivVisible = false;
+					function showSubmitFields()
+					{
+						if (fieldsDivVisible)
+							document.getElementById("submitFields").style.display="none";
+						else
+							document.getElementById("submitFields").style.display="block";
+						fieldsDivVisible = !fieldsDivVisible;
+					}
+				</script>
+
     </head>
     <body>
+		<img src="Images/homebutton.png" style="position:absolute; top:560px; left:190px; width:50px; z-index:10;">
+		<img src="Images/fields.jpg" onclick="showSubmitFields()" style="position:absolute; top:560px; left:350px; width:50px; z-index:10;">
         <div id="container">
-            <a href="#">Google+</a>
-            <a href="#">Email</a>
-            <a href="#">Bank of America</a>
-            <a href="#">Amazon</a>
-            <a href="#">System Settings</a>
-            <a href="#">Notes</a>
-            <a href="#">Photos</a>
-            <a href="#">Contacts</a>
-            <a href="#">Call</a>
-            <a href="text.html">Text</a>
+            <div id="screen">
+                <!--<a href="#">Google+</a>
+                <a href="#">Email</a>
+                <a href="#">Bank of America</a>
+                <a href="#">Amazon</a>
+                <a href="#">System Settings</a>
+                <a href="#">Notes</a>
+                <a href="#">Photos</a>
+                <a href="#">Contacts</a>
+                <a href="#">Call</a>
+                <a href="text.html">Text</a>-->
+            </div>
+						<div id="submitFields" style="display:none; position:absolute; top:110px; left:60px; height:400px; width:300px; border:1px solid black">
+							TEST
+						</div>
         </div>
+        <script src="index.js"></script>
     </body>
 </html>
