@@ -195,3 +195,9 @@ body{
     width:324px;
     right:320px;
 }
+
+.photo{
+	width: 75px;
+	height: 75px;
+	padding: 4px;
+}
