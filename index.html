@@ -51,8 +51,42 @@
 							document.getElementById("fieldPassChanged").innerHTML="NO";
 					}
 
+var timerExists = false;
+
 					function loadHome()
 					{
+
+var totalSeconds = 0;
+
+var minutesLabel = document.getElementById("minutes");
+var secondsLabel = document.getElementById("seconds");
+if(!timerExists) var stepper = setInterval(setTime, 1000);
+timerExists = true;
+
+function setTime() {
+    ++totalSeconds;
+    secondsLabel.innerHTML = pad(totalSeconds % 60);
+    minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+}
+
+function pad(val) {
+    var valString = val + "";
+    if (valString.length < 2) {
+        return "0" + valString;
+    } else {
+        return valString;
+    }
+}
+
+function stop(){
+    clearInterval(stepper);
+    alert(   
+        pad(parseInt(totalSeconds/60))+
+        ":"+
+        pad(totalSeconds%60)
+    );
+}
+
 						if (fieldsDivVisible) {
 							document.getElementById("submitFields").style.display="none";
 							fieldsDivVisible = false;
@@ -102,6 +136,7 @@
 							document.getElementById("checkemail").style.display="none";
 						if (fieldphone == phone) {
 							document.getElementById("checkphone").style.display="block";
+
 							count++;
 						} else
 							document.getElementById("checkphone").style.display="none";
@@ -167,6 +202,10 @@
 				<img src="Images/homebutton.png" onclick="loadHome()" ondblclick="loadCover()" style="position:absolute; top:560px; left:190px; width:50px; z-index:10;">
 				<img src="Images/fields.jpg" onclick="showSubmitFields()" style="position:absolute; top:560px; left:350px; width:50px; z-index:10;">
 				<div id="container">
+                    <div id="timer">
+                    <span id="minutes" style="position:absolute; color:red;float:right;right:35px;"></span>
+                    <span id="seconds" style="position:absolute;color:red;left:5px;float:right;"></span>
+                    </div>
 					<div id="screen">
             </div>
 						<div id="submitFields">
