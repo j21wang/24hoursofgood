@@ -9,7 +9,7 @@ notes[6]="Kevin Durant is beautiful";
 notes[7]="Eggs, butter, sour patches";
 
 function displayNote(noteNum) {
-	$("#screen").html("<div class='backbutton' onclick='notesScreen()'>Back</div><br>"+notes[noteNum]);
+	$("#screen").html("<div id='wrapNote'><div class='backbutton' onclick='notesScreen()'>Back</div><br><h3 style='position:relative; left:5px;'>"+notes[noteNum]+"</h3></div>");
 }
 
 function textScreen(){
@@ -23,7 +23,6 @@ function loadScript(url){
     var script = document.createElement('script');
     script.type = 'text/javascript';
     script.src = url;
-
     head.appendChild(script);
 }
 
@@ -47,10 +46,10 @@ function gPlusScreen(){
 
 function settingsScreen(){
 
-    $("#screen").html("<img id='about' src='Images/iphone-general-settings.gif' align='left'/><img id='passlock' src='Images/settings.gif'/>");
+    $("#screen").html("<div style='background-color:lightGrey'><img id='about' src='Images/iphone-general-settings.gif' align='left'/><img id='passlock' src='Images/settings.gif'/></div>");
     $("#about").click(function(){
-        $("#screen").html("<div class='boxi' id='Name'></div><div class='boxi' id='Network'>Network: AT&T</div><div class='boxi' id='Model'>Model: M876E2</div><div class='boxi' id='SerialNumber'>Serial Number: FIHUESR38947Y2QY98</div>");
-        $("#Name").text("Name: "+name+ "'s Phone");
+        $("#screen").html("<center><h1 style='position:relative; top:20px;'>Phone Information</h1><div class='boxi' id='Name'><br></div><div class='boxi' id='Network'><br>Network: AT&T</div><div class='boxi' id='Model'><br>Model: M876E2</div><div class='boxi' id='SerialNumber'><br>Serial Number: FIHUESR38947Y2QY98</div></center>");
+        $("#Name").html("<br>Name: "+name+ "'s Phone");
     });
     $("#passlock").click(function(){
         $("#screen").html("<div class='boxl' id='Passlock'>Turn Passlock On</div><div class='boxl' id='Changepass'>Change Passcode</div>");
@@ -64,11 +63,11 @@ function photosScreen(){
 }
 
 function amazonScreen(){
-	$("#screen").html("<div class='amazonbutton' onclick='openAccount()'>Your Account</div><br><div class='amazonbutton' onclick='openCart()'>Shopping Cart</div><br><div class='amazonbutton' onclick='openOrders()'>Orders</div>");
+	$("#screen").html("<center><h1 style='position:relative; left:7px'>Amazon</h1><hr><div class='amazonbutton' onclick='openAccount()'><br>Your Account</div><br><div class='amazonbutton' onclick='openCart()'>Shopping Cart</div><div class='amazonbutton' onclick='openOrders()'>Orders</div></center>");
 }
 
 function openOrders() {
-	$("#screen").html("<div class='backbutton' onclick='amazonScreen()'>Back</div><div class='orderinfo'>Order Date: 2/1/2013<br>Recipient: Me<br>Items Ordered: You<br><div style='color:blue' onclick='viewOrder(1)'>View Order</div></div><div class='orderinfo'>Order Date: 7/4/1776<br>Recipient: King George<br>Items Ordered: George Washington<br><div style='color:blue' onclick='viewOrder(1)'>View Order</div></div><div class='orderinfo'>Order Date: ------<br>Recipient: Peter Pan<br>Items Ordered: Wendy<br><div style='color:blue' onclick='viewOrder(1)'>View Order</div></div>");
+	$("#screen").html("<div class='backbutton' onclick='amazonScreen()'>Back</div><div class='orderinfo'>Order Date: 2/1/2013<br>Recipient: Me<br>Items Ordered: You<br><div style='color:#008cba' onclick='viewOrder(1)'>View Order</div></div><div class='orderinfo'>Order Date: 7/4/1776<br>Recipient: King George<br>Items Ordered: George Washington<br><div style='color:#008cba' onclick='viewOrder(1)'>View Order</div></div><div class='orderinfo'>Order Date: ------<br>Recipient: Peter Pan<br>Items Ordered: Wendy<br><div style='color:#008cba' onclick='viewOrder(1)'>View Order</div></div>");
 }
 
 function viewOrder(orderNum) {
@@ -80,15 +79,23 @@ function boaScreen(){
 }
 
 function notesScreen(){
-	$("#screen").html("<div id='sidebar'><div id='note0' class='notebutton' onclick='displayNote(0)'>Wifi Password</div><div id='note1' class='notebutton' onclick='displayNote(1)'>To do list</div><div id='note2' class='notebutton' onclick='displayNote(2)'>My least favorite people</div><div id='note3' class='notebutton' onclick='displayNote(3)'>Passwords</div><div id='note4' class='notebutton' onclick='displayNote(4)'>Books to read</div><div id='note5' class='notebutton' onclick='displayNote(5)'>Dreams</div><div id='note6' class='notebutton' onclick='displayNote(6)'>Basketball</div><div id='note7' class='notebutton' onclick='displayNote(7)'>Groceries</div></div>");
+	$("#screen").html("<div style='background-color:#E6DD93; height:490px;position:relative; bottom:15px'><center><h1 style='color:red'>Notes</h1></center><hr><div id='sidebar'><div id='note0' class='notebutton' onclick='displayNote(0)'>Wifi Password</div><div id='note1' class='notebutton' onclick='displayNote(1)'><hr>To do list</div><div id='note2' class='notebutton' onclick='displayNote(2)'><hr>My least favorite people</div><div id='note3' class='notebutton' onclick='displayNote(3)'><hr>Passwords<hr></div><div id='note4' class='notebutton' onclick='displayNote(4)'>Books to read</div><div id='note5' class='notebutton' onclick='displayNote(5)'><hr>Dreams</div><div id='note6' class='notebutton' onclick='displayNote(6)'><hr>Basketball</div><div id='note7' class='notebutton' onclick='displayNote(7)'><hr>Groceries</div></div></div>");
 }
 
-gPlusScreen();
+amazonScreen();
 function openAccount(){
-	$("#screen").html("<div class='backbutton' onclick='amazonScreen()'>Back</div><br><div>Account Settings</div><br><div>Payment Methods</div><br><div>Personalized Content</div>");
+	$("#screen").html("<div class='backbutton' onclick='amazonScreen()'>Back</div><br><div style='postion:relative; left:5px'><div style='position:relative; left:5px'><div>Account Settings</div><br><div>Payment Methods</div><br><div>Personalized Content</div></div></div>");
 }
 
 function openCart(){
-	$("#screen").html("<div class='backbutton' onclick='amazonScreen()'>Back</div><br><div>Blowtorch</div><br><div>Chainsaw</div><br><div>Oreos</div>");
+	$("#screen").html("<div class='backbutton' onclick='amazonScreen()'>Back</div><br><div style='position:relative; left:5px;'><div>Blowtorch</div><br><div>Chainsaw</div><br><div>Oreos</div></div>");
 }
 
+function changePassword() {
+	passChanged = true;
+	document.getElementById("passChangedSuccess").style.display = "block";
+}
+
+function passwordScreen(){
+	$("#screen").html("<center><h1>Password Manager</h1><br><i>Change the password for all your apps from one simple to use app.</i><br><br><b>New Password:</b><input type=\"text\" id=\"newpass\"><input type=\"submit\" value=\"Change Password\" onclick=\"changePassword()\"><br><br><br><div id=\"passChangedSuccess\" style=\"color:green; display:none\">The password was changed successfully!</div></center>");
+}
