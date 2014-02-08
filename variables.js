@@ -1,5 +1,4 @@
-var startDate = new Date();
-var startTime = startDate.getTime()/1000;
+var startTime;
 
 var passChanged = false;
 

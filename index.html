@@ -60,7 +60,11 @@ var totalSeconds = 0;
 
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
-if(!timerExists) var stepper = setInterval(setTime, 1000);
+if(!timerExists) { 
+	var stepper = setInterval(setTime, 1000);
+	var d = new Date();
+	startTime = d.getTime()/1000;
+}
 timerExists = true;
 
 function setTime() {
