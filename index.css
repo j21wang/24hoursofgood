@@ -1,9 +1,14 @@
+body{
+    font-family: Helvetica, Arial;
+}
+
 #container{
     border: 10px solid black;
     width: 400px;
     height:590px;
     border-radius:15px;
     background-color:black;
+    overflow-y: scroll;
 }
 
 #screen{
@@ -179,4 +184,11 @@
     position: relative;
     top: 700px;
     left:800px;
+}
+
+#passlock{
+    position:relative;
+    top:98px;
+    width:324px;
+    right:320px;
 }

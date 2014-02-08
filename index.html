@@ -2,6 +2,11 @@
 <html>
     <head>
         <link href="index.css" type="text/css" rel="stylesheet"></link>
+				<style type="text/css">
+					.appicon {
+						width:120px;
+					}
+				</style>
         <script src="jquery.js"></script>
         <script src="variables.js"></script>
         <script src="gmail.js"></script>
@@ -18,11 +23,24 @@
 							document.getElementById("submitFields").style.display="block";
 						fieldsDivVisible = !fieldsDivVisible;
 					}
+
+					function loadHome()
+					{
+						var homestr = '<table><tr><td><img onclick="" src="Images/g+.jpg" class="appicon"></td>' +
+																			'<td><img onclick="" src="Images/gmail.png" class="appicon"></td>' +
+																			'<td><img onclick="" src="Images/boa.jpg" class="appicon"></td></tr><tr>' + 
+																			'<td><img onclick="" src="Images/amazon.png" class="appicon"></td>' + 
+																			'<td><img onclick="" src="Images/settings.png" class="appicon"></td>' + 
+																			'<td><img onclick="" src="Images/notes.png" class="appicon"></td></tr><tr>' + 
+																			'<td><img onclick="" src="Images/photo.png" class="appicon"></td>' + 
+																			'<td><img onclick="" src="Images/text.png" class="appicon"></td></tr></table>';
+						document.getElementById("screen").innerHTML=homestr;
+					}
 				</script>
 
     </head>
     <body>
-		<img src="Images/homebutton.png" style="position:absolute; top:560px; left:190px; width:50px; z-index:10;">
+		<img src="Images/homebutton.png" onclick="loadHome()" style="position:absolute; top:560px; left:190px; width:50px; z-index:10;">
 		<img src="Images/fields.jpg" onclick="showSubmitFields()" style="position:absolute; top:560px; left:350px; width:50px; z-index:10;">
         <div id="container">
             <div id="screen">
