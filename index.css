@@ -83,10 +83,10 @@ h2:hover{
 
 #profile {
     position: relative;
-    left:450px;
+    left:130px;
     width: 100px;
     height: 100px;
-    top:400px;
+    top:100px;
     z-index: 2;
 }
 
@@ -96,7 +96,7 @@ h2:hover{
 
     width: 370px;
     height: 200px;
-    down:200px;
+    bottom:105px;
     z-index: 1;
 }
 
@@ -114,6 +114,8 @@ h2:hover{
 
 #name{
     position: relative;
+    left: 105px;
+    bottom: 50px;
 
 }
 
@@ -123,13 +125,14 @@ h2:hover{
     position: relative;
     width: 365px;
     
-    background-color:LightSteelBlue;
+    background-color:Snow;
     left: auto;
 
 }
 .tabs{
     position: relative;
-    left:440px;
+    left:100px;
+
 }
 
 
@@ -150,35 +153,35 @@ h2:hover{
 #address{
     border: 3px solid yellow;
     position: relative;
-    top: 200px;
-     height: 75px;
+    top: 60px;
+    height: 75px;
 }
 
 #work{
     border: 3px solid blue;
     position: relative;
-    top: 350px;
+    top: 75px;
      height: 75px;
 }
 
 #contactinfo{
     border: 3px solid pink;
     position: relative;
-    top: 400px;
+    top: 90px;
      height: 75px;
 }
 
 #basicinfo{
     border: 3px solid orange;
     position: relative;
-    top: 500px;
+    top: 100px;
      height: 75px;
 }
 
 #school{
     border: 3px solid purple;
     position: relative;
-    top: 600px;
+    top: 110px;
     height: 75px;
 }
 
@@ -198,6 +201,8 @@ h2:hover{
     right:320px;
 }
 
-td,th{
-    width:50px;
+.photo{
+	width: 75px;
+	height: 75px;
+	padding: 4px;
 }

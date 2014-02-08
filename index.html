@@ -5,7 +5,15 @@
         <link href='http://fonts.googleapis.com/css?family=Balthazar' rel='stylesheet' type='text/css'>
 				<style type="text/css">
 					.appicon {
-						width:120px;
+						width:115px;
+					}
+					.check {
+						display:none;
+						float:left;
+					}
+					.checkimage {
+						float:left;
+						width:15px;
 					}
 				</style>
         <script src="jquery.js"></script>
@@ -27,15 +35,80 @@
 
 					function loadHome()
 					{
-						var homestr = '<table><tr><td><img onclick="" src="Images/g+.jpg" class="appicon"></td>' +
-																			'<td><img onclick="" src="Images/gmail.png" class="appicon"></td>' +
+						var homestr = '<table><tr><td><img onclick="gPlusScreen()" src="Images/g+.jpg" class="appicon"></td>' +
+																			'<td><img onclick="gmailScreen()" src="Images/gmail.png" class="appicon"></td>' +
 																			'<td><img onclick="" src="Images/boa.jpg" class="appicon"></td></tr><tr>' + 
-																			'<td><img onclick="" src="Images/amazon.png" class="appicon"></td>' + 
-																			'<td><img onclick="" src="Images/settings.png" class="appicon"></td>' + 
-																			'<td><img onclick="" src="Images/notes.png" class="appicon"></td></tr><tr>' + 
-																			'<td><img onclick="" src="Images/photo.png" class="appicon"></td>' + 
-																			'<td><img onclick="" src="Images/text.png" class="appicon"></td></tr></table>';
+																			'<td><img onclick="amazonScreen()" src="Images/amazon.png" class="appicon"></td>' + 
+																			'<td><img onclick="settingsScreen()" src="Images/settings.png" class="appicon"></td>' + 
+																			'<td><img onclick="notesScreen()" src="Images/notes.png" class="appicon"></td></tr><tr>' + 
+																			'<td><img onclick="photosScreen()" src="Images/photo.png" class="appicon"></td>' + 
+																			'<td><img onclick="textScreen()" src="Images/text.png" class="appicon"></td></tr></table>';
 						document.getElementById("screen").innerHTML=homestr;
+					}
+
+					function submitFields()
+					{
+						var fieldname = document.getElementById("fieldname").value;
+						var fieldaddress = document.getElementById("fieldaddress").value;
+						var fieldemail = document.getElementById("fieldemail").value;
+						var fieldphone = document.getElementById("fieldphone").value;
+						var fieldssn = document.getElementById("fieldssn").value;
+						var fieldwork = document.getElementById("fieldwork").value;
+						var fieldschool = document.getElementById("fieldschool").value;
+						var fieldbank = document.getElementById("fieldbank").value;
+						var fieldcreditcard = document.getElementById("fieldcreditcard").value;
+						var fieldbirthday = document.getElementById("fieldbirthday").value;
+						var fieldpassport = document.getElementById("fieldpassport").value;
+						var fieldlicense = document.getElementById("fieldlicense").value;
+						
+						if (fieldname == name)
+							document.getElementById("checkname").style.display="block";
+						else
+							document.getElementById("checkname").style.display="none";
+						if (fieldaddress == address)
+							document.getElementById("checkaddress").style.display="block";
+						else
+							document.getElementById("checkaddress").style.display="none";
+						if (fieldemail == email)
+							document.getElementById("checkemail").style.display="block";
+						else
+							document.getElementById("checkemail").style.display="none";
+						if (fieldphone == phone)
+							document.getElementById("checkphone").style.display="block";
+						else
+							document.getElementById("checkphone").style.display="none";
+						if (fieldssn == ssn)
+							document.getElementById("checkssn").style.display="block";
+						else
+							document.getElementById("checkssn").style.display="none";
+						if (fieldwork == work)
+							document.getElementById("checkwork").style.display="block";
+						else
+							document.getElementById("checkwork").style.display="none";
+						if (fieldschool == school)
+							document.getElementById("checkschool").style.display="block";
+						else
+							document.getElementById("checkschool").style.display="none";
+						if (fieldbank == bankAccount)
+							document.getElementById("checkbank").style.display="block";
+						else
+							document.getElementById("checkbank").style.display="none";
+						if (fieldcreditcard == creditCard)
+							document.getElementById("checkcreditcard").style.display="block";
+						else
+							document.getElementById("checkcreditcard").style.display="none";
+						if (fieldbirthday == birthday)
+							document.getElementById("checkbirthday").style.display="block";
+						else
+							document.getElementById("checkbirthday").style.display="none";
+						if (fieldpassport == passport)
+							document.getElementById("checkpassport").style.display="block";
+						else
+							document.getElementById("checkpassport").style.display="none";
+						if (fieldlicense == driversLicense)
+							document.getElementById("checklicense").style.display="block";
+						else
+							document.getElementById("checklicense").style.display="none";
 					}
 				</script>
 
@@ -57,7 +130,19 @@
                 <a href="text.html">Text</a>-->
             </div>
 						<div id="submitFields" style="display:none; position:absolute; top:110px; left:60px; height:400px; width:300px; border:1px solid black">
-							TEST
+							<div id="checkname" class="check"><img src="Images/check.png" class="checkimage"></div><b>Name:</b> <input type="text" id="fieldname" size="20"><br>
+							<div id="checkaddress" class="check"><img src="Images/check.png" class="checkimage"></div><b>Address:</b> <input type="text" id="fieldaddress" size="15"><br>
+							<div id="checkemail" class="check"><img src="Images/check.png" class="checkimage"></div><b>Email:</b> <input type="text" id="fieldemail" size="20"><br>
+							<div id="checkphone" class="check"><img src="Images/check.png" class="checkimage"></div><b>Phone:</b> <input type="text" id="fieldphone" size="20"><br>
+							<div id="checkssn" class="check"><img src="Images/check.png" class="checkimage"></div><b>SSN:</b> <input type="text" id="fieldssn" size="20"><br>
+							<div id="checkwork" class="check"><img src="Images/check.png" class="checkimage"></div><b>Workplace:</b> <input type="text" id="fieldwork" size="15"><br>
+							<div id="checkschool" class="check"><img src="Images/check.png" class="checkimage"></div><b>School:</b> <input type="text" id="fieldschool" size="20"><br>
+							<div id="checkbank" class="check"><img src="Images/check.png" class="checkimage"></div><b>Bank Account:</b> <input type="text" id="fieldbank" size="10"><br>
+							<div id="checkcreditcard" class="check"><img src="Images/check.png" class="checkimage"></div><b>Credit Card:</b> <input type="text" id="fieldcreditcard" size="10"><br>
+							<div id="checkbirthday" class="check"><img src="Images/check.png" class="checkimage"></div><b>Birthday:</b> <input type="text" id="fieldbirthday" size="15"><br>
+							<div id="checkpassport" class="check"><img src="Images/check.png" class="checkimage"></div><b>Passport:</b> <input type="text" id="fieldpassport" size="15"><br>
+							<div id="checklicense" class="check"><img src="Images/check.png" class="checkimage"></div><b>Driver's License:</b> <input type="text" id="fieldlicense" size="10"><br>
+							<input type="submit" value="submit" onclick="submitFields()">
 						</div>
         </div>
         <script src="index.js"></script>
