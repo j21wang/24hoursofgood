@@ -267,13 +267,13 @@ function showInbox()
         var index = spamEmails[i].title.substring(0,30);
 		inbox = inbox + "<tr onclick=\"showEmail("+i+")\"><td>"+spamEmails[i].from.substring(0,15)+"</td><td>"+index+"...</td></tr>";
 	}
-	var wholehtml = "<center><h1>Inbox<h1></center><table><tr><th>Sender</th><th>Subject Line</th></tr>"+inbox+"</table>";
+	var wholehtml = "<center><h1>Inbox<h1></center><table><tr><th><b>Sender</b></th><th><b>Subject Line</b></th></tr>"+inbox+"</table>";
 	document.getElementById("screen").innerHTML=wholehtml;
 }
 
 function showImportant()
 {
-	var wholehtml = "Important Emails<br><table><tr><th>Sender</th><th>Subject Line</th></tr><tr><td onclick=\"showEmail(-1)\">"+e_fafsa.from+"</td><td>"+e_fafsa.title+"</td></tr></table>";
+	var wholehtml = "<center><h1>Important Emails</h1></center><br><table><tr><th>Sender</th><th>Subject Line</th></tr><tr><td onclick=\"showEmail(-1)\">"+e_fafsa.from+"</td><td>"+e_fafsa.title+"</td></tr></table>";
 	document.getElementById("screen").innerHTML=wholehtml;
 }
 

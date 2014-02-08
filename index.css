@@ -220,3 +220,12 @@ h2:hover{
 	height: 75px;
 	padding: 4px;
 }
+
+tr:hover{
+    color:#008cba;
+    cursor:pointer;
+}
+
+th{
+    color:#008cba;
+}
