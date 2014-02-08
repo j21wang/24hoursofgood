@@ -20,7 +20,14 @@ function gPlusScreen(){
 
 function settingsScreen(){
 
-    $("#screen").html("<a href='setting-about.html'><img id='about' src='Images/iphone-general-settings.gif' align='left'/><a href='settings-passlock'><img id='passlock' src='Images/settings.gif'/>");
+    $("#screen").html("<img id='about' src='Images/iphone-general-settings.gif' align='left'/><img id='passlock' src='Images/settings.gif'/>");
+    $("#about").click(function(){
+        $("#screen").html("<div class='box' id='Name'></div><div class='box' id='Network'>Network AT&T</div><div class='box' id='Model'>Model M876E2</div><div class='box' id='SerialNumber'>Serial Number FIHUESR38947Y2QY98</div>");
+        $("#Name").text("Name: "+name+ "'s Phone");
+    });
+    $("#passlock").click(function(){
+        $("#screen").html("<div class='box' id='Passlock'>Turn Passlock On</div><div class='box' id='Changepass'>Change Passcode</div>");
+    });
 
 }
 
