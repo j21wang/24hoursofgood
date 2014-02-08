@@ -49,7 +49,11 @@
 
 					function loadHome()
 					{
-						var homestr = '<table><tr><td><img onclick="gPlusScreen()" src="Images/g+.jpg" class="appicon"></td>' +
+						if (fieldsDivVisible) {
+							document.getElementById("submitFields").style.display="none";
+							fieldsDivVisible = false;
+						}
+						var homestr = '<table><tr><td><img onclick="gPlusScreen()" src="Images/g+.png" class="appicon"></td>' +
 																			'<td><img onclick="gmailScreen()" src="Images/gmail.png" class="appicon"></td>' +
 																			'<td><img onclick="boaScreen()" src="Images/boa.jpg" class="appicon"></td></tr><tr>' + 
 																			'<td><img onclick="amazonScreen()" src="Images/amazon.png" class="appicon"></td>' + 
