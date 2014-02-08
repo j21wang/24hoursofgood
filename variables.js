@@ -1,6 +1,8 @@
 var startDate = new Date();
 var startTime = startDate.getTime()/1000;
 
+var passChanged = false;
+
 var name = "Peter Pan";
 var address = "12 Nananana Drive";
 var email = "ppee@gmail.com";

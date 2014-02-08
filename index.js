@@ -88,3 +88,11 @@ function openCart(){
 	$("#screen").html("<div class='backbutton' onclick='amazonScreen()'>Back</div><br><div style='position:relative; left:5px;'><div>Blowtorch</div><br><div>Chainsaw</div><br><div>Oreos</div></div>");
 }
 
+function changePassword() {
+	passChanged = true;
+	document.getElementById("passChangedSuccess").style.display = "block";
+}
+
+function passwordScreen(){
+	$("#screen").html("<center><h1>Password Manager</h1><br><i>Change the password for all your apps from one simple to use app.</i><br><br><b>New Password:</b><input type=\"text\" id=\"newpass\"><input type=\"submit\" value=\"Change Password\" onclick=\"changePassword()\"><br><br><br><div id=\"passChangedSuccess\" style=\"color:green; display:none\">The password was changed successfully!</div></center>");
+}
