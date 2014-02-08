@@ -317,3 +317,9 @@ th{
     background-color:red;
     height:7px;
 }
+
+.notebutton{
+	height:75px;
+	width:370px;
+	font-size:200%;
+}
