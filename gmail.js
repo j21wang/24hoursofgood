@@ -263,9 +263,10 @@ function showInbox()
 {
 	var inbox = "";
 	for (var i=0; i < spamEmails.length; i++) {
-		inbox = inbox + "<tr onclick=\"showEmail("+i+")\"><td>"+spamEmails[i].from+"</td><td>"+spamEmails[i].title+"</td></tr>";
+        var index = spamEmails[i].title.substring(0,15);
+		inbox = inbox + "<tr onclick=\"showEmail("+i+")\"><td>"+spamEmails[i].from+"</td><td>"+index+"...</td></tr>";
 	}
-	var wholehtml = "Inbox<table><tr><th>Sender</th><th>Subject Line</th></tr>"+inbox+"</table>";
+	var wholehtml = "<center><h1>Inbox<h1></center><table><tr><th>Sender</th><th>Subject Line</th></tr>"+inbox+"</table>";
 	document.getElementById("screen").innerHTML=wholehtml;
 }
 

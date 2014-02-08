@@ -3,7 +3,7 @@ function textScreen(){
 }
 
 function gmailScreen(){
-    $("#screen").html("My Emails<h3 onclick='showInbox()'>Inbox</h3><h3 onclick='showImportant()'>Important</h3><h3 onclick='showSent()'>Sent Mail</h3><h3 onclick='showDrafts()'>Drafts</h3><h3>More</h3>");
+    $("#screen").html("<br><br><center><h1>My Emails</h1><hr><h2 onclick='showInbox()'>Inbox</h2><h2 onclick='showImportant()'>Important</h2><h2 onclick='showSent()'>Sent Mail</h2><h2 onclick='showDrafts()'>Drafts</h2><h2>More</h2></center>");
 }
 
 function gPlusScreen(){
@@ -28,4 +28,5 @@ function photosScreen(){
 
     $("#screen").html("<table><tr><td><img src='photos/1.jpg'><td><img src='photos/2.jpg'><td><img src='photos/3.jpg'></tr><tr><td><img src='photos/4.jpg'><td><img src='photos/5.jpg'><td><img src='photos/6.jpg'></tr><tr><td><img src='photos/7.jpg'><td><img src='photos/8.jpg'><td><img src='photos/9.jpg'></tr></table>");
 }
-gPlusScreen();
+
+gmailScreen();

@@ -1,5 +1,10 @@
 body{
-    font-family: Helvetica, Arial;
+    font-family: 'Balthazar',serif;
+}
+
+h2:hover{
+    color:#008cba;
+    cursor:pointer;
 }
 
 #container{
@@ -191,4 +196,8 @@ body{
     top:98px;
     width:324px;
     right:320px;
+}
+
+td,th{
+    width:50px;
 }
