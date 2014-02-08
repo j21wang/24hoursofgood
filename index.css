@@ -1,5 +1,5 @@
 body{
-    font-family: 'Balthazar',serif;
+    font-family: 'Ovo',serif;
 }
 
 h2:hover{
@@ -228,4 +228,15 @@ tr:hover{
 
 th{
     color:#008cba;
+}
+
+#boa{
+    position:relative;
+    top:50px;
+    height:60%;
+}
+
+#strip{
+    background-color:red;
+    height:7px;
 }

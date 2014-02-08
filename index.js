@@ -30,8 +30,7 @@ function photosScreen(){
 }
 
 function boaScreen(){
-    $("#screen").html("<div style=\"background-color:red\"><img src=\"Images/boa_logo.png\" width=\"100%\"><h2>Hello<i>"+name+"</i></h2><br><br><h3>Bank Account Information:</h3><h5> "+bankAccount+"</h5><br><br><h3>Credit Card Information</h3><h5>"+creditCard+"</h5></div>");
+    $("#screen").html("<div id='strip'></div><div id='boa'><img src=\"Images/boa_logo.png\" width=\"100%\"><center><h1>Hello<i>, "+name+"</i></h1><h3>Account Number: "+bankAccount+"</h3><h3>Credit Card Number: "+creditCard+"</h3><hr><h3>Savings Account Balance: $10002.39</h3><h3>Checkings Account Balance: $244.34</h3></center></div>");
 
 }
 
-boaScreen();

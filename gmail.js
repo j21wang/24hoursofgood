@@ -248,7 +248,7 @@ spamEmails.splice(2,0, e_rutgers);
 
 function showEmail(e)
 {
-	var prefix = "<input onclick=\"showInbox()\" type=\"submit\" value=\"Go back...\"><br><br>";
+	var prefix = "<input onclick=\"gmailScreen()\" type=\"submit\" value=\"Go back...\"><br><br>";
 	if (e == -1)
 		document.getElementById("screen").innerHTML=prefix+e_fafsa.body;
 	else if (e == -2)
@@ -273,7 +273,7 @@ function showInbox()
 
 function showImportant()
 {
-	var wholehtml = "<center><h1>Important Emails</h1></center><br><table><tr><th>Sender</th><th>Subject Line</th></tr><tr><td onclick=\"showEmail(-1)\">"+e_fafsa.from+"</td><td>"+e_fafsa.title+"</td></tr></table>";
+	var wholehtml = "<center><h1>Important Emails</h1></center><br><table><tr><th>Sender</th><th>Subject Line</th></tr><tr onclick=\"showEmail(-1)\"><td>"+e_fafsa.from+"</td><td>"+e_fafsa.title+"</td></tr></table>";
 	document.getElementById("screen").innerHTML=wholehtml;
 }
 
