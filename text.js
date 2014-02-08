@@ -9,7 +9,7 @@ $(document).ready(function(){
         $("#loadingImage").delay(1000).fadeOut(100, function(){
             $(this).remove();
             if(containsSSN(text.toLowerCase()) && !asked){
-                $("#textsBox").append("<div id='bubbleLeft' class='bubble'>it's 183 92 8309</div>");
+                $("#textsBox").append("<div id='bubbleLeft' class='bubble'>it's "+ssn+"</div>");
                 asked = true;
             } else if(containsSSN(text.toLowerCase())){
                 $("#textsBox").append("<div id='bubbleLeft' class='bubble'>you asked me already...</div>");
