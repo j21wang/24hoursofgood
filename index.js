@@ -74,4 +74,12 @@ function notesScreen(){
 	$("#screen").html("<div id='sidebar'><div id='note0' class='notebutton' onclick='displayNote(0)'>Wifi Password</div><div id='note1' class='notebutton' onclick='displayNote(1)'>To do list</div><div id='note2' class='notebutton' onclick='displayNote(2)'>My least favorite people</div><div id='note3' class='notebutton' onclick='displayNote(3)'>Passwords</div><div id='note4' class='notebutton' onclick='displayNote(4)'>Books to read</div><div id='note5' class='notebutton' onclick='displayNote(5)'>Dreams</div><div id='note6' class='notebutton' onclick='displayNote(6)'>Basketball</div><div id='note7' class='notebutton' onclick='displayNote(7)'>Groceries</div></div>");
 }
 
-notesScreen();
+function openAccount(){
+	$("#screen").html("<div class='backbutton' onclick='amazonScreen()'>Back</div><br><div>Account Settings</div><br><div>Payment Methods</div><br><div>Personalized Content</div>");
+}
+
+function openCart(){
+	$("#screen").html("<div class='backbutton' onclick='amazonScreen()'>Back</div><br><div>Blowtorch</div><br><div>Chainsaw</div><br><div>Oreos</div>");
+}
+
+amazonScreen();
