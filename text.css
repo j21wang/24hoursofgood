@@ -1,7 +1,11 @@
+#container{
+
+}
+
 #textsBox{
     overflow-y: scroll;
-    height: 200px;
-    width: 200px;
+    height: 400px;
+    width: 400px;
     border: thin solid black;
 }
 
@@ -29,4 +33,14 @@
     border-radius:15px;
     height:30px;
     float: left;
+}
+
+#contact{
+    margin:0;
+    position:relative;
+    left:150px;
+}
+
+.textMessage{
+
 }
