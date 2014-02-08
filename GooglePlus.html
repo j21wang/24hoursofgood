@@ -1,87 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<link href="GooglePlus.css" type="GooglePlus.css" rel="stylesheet"></link>
 	<title>Google+</title>
+<script src= "jquery.js"></script>
 
-<style>
+<script src= "variables.js"></script>
 
-#background {
-	position: relative; 
-	
-	width: 1000px;
-	height: 400px;
-}
-
-#profile {
-	position: relative; 
-
-	left:500px;
-	width: 100px;
-	height: 100px;
-}
-
-.boxed {
-	position: relative; 
-	width: 300px;
-	height: 300px;
-	
-	left: 400px;
-
-}
-.tabs{
-	position: relative; 
-	left:500px;
-}
-.name{
-	position: relative; 
-	left:550px;
-}
-
-#box1{
-	border: 3px solid red;
-	position: relative; 
-	top: 50px;
-}
-
-#box2{
-	border: 3px solid green;
-	position: relative; 
-	top: 100px;
-}
-
-#box3{
-	border: 3px solid yellow;
-	position: relative; 
-	top: 200px;
-}
-
-#box4{
-	border: 3px solid blue;
-	position: relative; 
-	top: 300px;
-}
-
-#box5{
-	border: 3px solid pink;
-	position: relative; 
-	top: 400px;
-}
-
-#box6{
-	border: 3px solid orange;
-	position: relative; 
-	top: 500px;
-}
-
-#box7{
-	border: 3px solid purple;
-	position: relative; 
-	top: 600px;
-}
-
-
-</style>
 
 
 
@@ -90,50 +15,85 @@
 
 
 <div>
-<img id="background" src="Images/GooglePlusBackground.jpg"/>
+
+<div>
 
 <img id="profile" src="Images/GooglePlusIcon.jpg" />
 
-<div class="name">
-	Name
+<img id="background" src="Images/GooglePlusBackground.jpg"/>
+
+</div>
+
+<div class ="box" id="name">
+	
 </div>
 
 <div class="tabs">
 	About       Posts      Photos
 </div>
 
-<div class="boxed" id="box1">
-  My Story
-</div>
+<div class="boxed" id="mystory">
+	<h1>My Story</h1>
+  
+  <h>Tagline</h>
 
-<div class="boxed" id="box2">
-  People (Contacts)
-</div>
+ <p>  The kid who never grew up. </p>
+  
+ <h>Bragging Rights</h>
 
-<div class="boxed" id="box3">
-  Places - stalker
-</div>
-
-<div class="boxed" id="box4">
-  Work
-</div>
-
-<div class="boxed" id="box5">
-  Contact Information
-</div>
-
-<div class="boxed" id="box6">
- Basic Information
-</div>
-
-<div class="boxed" id="box7">
-Education
-</div>
+  <p>   Never age, Own an island called Neverland, Leader of Lost Boys. </p>
 
 </div>
 
 
+<div class="boxed" id="address">
+  
+</div>
 
+
+<div class="boxed" id="work">
+	  
+</div>
+
+<div class="boxed" id="contactinfo">
+
+</div>
+
+<div class="boxed" id="basicinfo">
+ 
+</div>
+
+<div class="boxed" id="school">
+
+</div>
+
+<div class="click">
+
+	Identity Collection
+
+</div>
+
+</div>
+
+
+<script type="text/javascript">
+
+$("#name").text("Name: "+name);
+
+console.log($("#name"));
+
+$("#address").text("Address: "+address);
+
+$("#work").text("Work: "+work);
+
+$("#contactinfo").text("Contact Information: "+phone);
+
+$("#basicinfo").text("Basic Information: "+birthday);
+
+$("#school").text("Education: "+school);
+
+
+</script>
 
 
 

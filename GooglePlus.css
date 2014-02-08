@@ -1,0 +1,101 @@
+#profile {
+	position: relative; 
+
+	left:450px;
+	width: 100px;
+	height: 100px;
+	top:400px;
+	z-index: 2;
+}
+
+
+#background {
+	position: relative; 
+	
+	width: 1000px;
+	height: 400px;
+	down:200px;
+	z-index: 1;
+}
+
+.box{
+	
+	width: 1000px;
+	height: 50px;
+	border: 1px solid grey;
+	position: relative; 
+
+
+}
+
+#name{
+	position: relative; 
+	
+}
+
+
+
+.boxed {
+	position: relative; 
+	width: 300px;
+	height: 300px;
+	
+	left: 350px;
+
+}
+.tabs{
+	position: relative; 
+	left:440px;
+}
+
+
+#mystory{
+	border: 3px solid red;
+	position: relative; 
+	top: 50px;
+}
+
+#box2{
+	border: 3px solid green;
+	position: relative; 
+	top: 150px;
+}
+
+#address{
+	border: 3px solid yellow;
+	position: relative; 
+	top: 200px;
+}
+
+#work{
+	border: 3px solid blue;
+	position: relative; 
+	top: 350px;
+}
+
+#contactinfo{
+	border: 3px solid pink;
+	position: relative; 
+	top: 400px;
+}
+
+#basicinfo{
+	border: 3px solid orange;
+	position: relative; 
+	top: 500px;
+}
+
+#school{
+	border: 3px solid purple;
+	position: relative; 
+	top: 600px;
+}
+
+.click{
+	width: 100px;
+	height: 100px;
+	border: 3px solid black;
+	position: relative; 
+	top: 700px;
+	left:800px;
+}
