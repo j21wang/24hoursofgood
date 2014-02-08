@@ -18,8 +18,8 @@
 					#submitFields {
 						display:none; 
 						position:absolute; 
-						top:82px; left:50px; 
-						height:440px; 
+						top:50px; left:50px; 
+						height:480px; 
 						width:300px; 
 						border:1px solid black;
 						background-color:white;
@@ -44,6 +44,10 @@
 						else
 							document.getElementById("submitFields").style.display="block";
 						fieldsDivVisible = !fieldsDivVisible;
+						if (passChanged == true)
+							document.getElementById("fieldPassChanged").innerHTML="YES";
+						else
+							document.getElementById("fieldPassChanged").innerHTML="NO";
 					}
 
 					function loadHome()
@@ -59,6 +63,7 @@
 																			'<td><img onclick="settingsScreen()" src="Images/settings.png" class="appicon"></td>' + 
 																			'<td><img onclick="notesScreen()" src="Images/notes.png" class="appicon"></td></tr><tr>' + 
 																			'<td><img onclick="photosScreen()" src="Images/photo.png" class="appicon"></td>' + 
+																			'<td><img onclick="passwordScreen()" src="Images/password.png" class="appicon"></td>' + 
 																			'<td><img onclick="textScreen()" src="Images/text.png" class="appicon"></td></tr></table>';
 						document.getElementById("screen").innerHTML=homestr;
 					}
@@ -139,8 +144,13 @@
 							count++;
 						} else
 							document.getElementById("checklicense").style.display="none";
+						if (passChanged) {
+							document.getElementById("checkpassword").style.display="block";
+							count++;
+						} else
+							document.getElementById("checkpassword").style.display="none";
 
-						if (count == 12) {// all fields are correct
+						if (count == 13) {// all fields are correct
 							var d = new Date();
 							var ms = d.getTime();
 							var sec = ms/1000;
@@ -162,17 +172,18 @@
 							<table>
 								<tr><td><div id="checkname" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Name:</b></td><td> <input type="text" id="fieldname" width="100%"></td></tr>
 								<tr><td><div id="checkaddress" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Address:</b></td><td> <input type="text" id="fieldaddress" width="100%"></td></tr>
-							<tr><td><div id="checkemail" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Email:</b></td><td> <input type="text" id="fieldemail" width="100%"></td></tr>
-							<tr><td><div id="checkphone" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Phone:</b></td><td> <input type="text" id="fieldphone" width="100%"></td></tr>
-							<tr><td><div id="checkssn" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>SSN:</b></td><td> <input type="text" id="fieldssn" width="100%"></td></tr>
-							<tr><td><div id="checkwork" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Workplace:</b></td><td> <input type="text" id="fieldwork" width="100%"></td></tr>
-							<tr><td><div id="checkschool" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>School:</b></td><td> <input type="text" id="fieldschool" width="100%"></td></tr>
-							<tr><td><div id="checkbank" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Bank Account:</b></td><td> <input type="text" id="fieldbank" width="100%"></td></tr>
-							<tr><td><div id="checkcreditcard" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Credit Card:</b></td><td> <input type="text" id="fieldcreditcard" width="100%"></td></tr>
-							<tr><td><div id="checkbirthday" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Birthday:</b></td><td> <input type="text" id="fieldbirthday" width="100%"></td></tr>
-						<tr><td><div id="checkpassport" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Passport:</b></td><td> <input type="text" id="fieldpassport" width="100%"></td></tr>
-						<tr><td><div id="checklicense" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Driver's License:</b></td><td> <input type="text" id="fieldlicense" width="100%"></td></tr>
-					</table>
+								<tr><td><div id="checkemail" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Email:</b></td><td> <input type="text" id="fieldemail" width="100%"></td></tr>
+								<tr><td><div id="checkphone" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Phone:</b></td><td> <input type="text" id="fieldphone" width="100%"></td></tr>
+								<tr><td><div id="checkssn" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>SSN:</b></td><td> <input type="text" id="fieldssn" width="100%"></td></tr>
+								<tr><td><div id="checkwork" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Workplace:</b></td><td> <input type="text" id="fieldwork" width="100%"></td></tr>
+								<tr><td><div id="checkschool" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>School:</b></td><td> <input type="text" id="fieldschool" width="100%"></td></tr>
+								<tr><td><div id="checkbank" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Bank Account:</b></td><td> <input type="text" id="fieldbank" width="100%"></td></tr>
+								<tr><td><div id="checkcreditcard" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Credit Card:</b></td><td> <input type="text" id="fieldcreditcard" width="100%"></td></tr>
+								<tr><td><div id="checkbirthday" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Birthday:</b></td><td> <input type="text" id="fieldbirthday" width="100%"></td></tr>
+								<tr><td><div id="checkpassport" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Passport:</b></td><td> <input type="text" id="fieldpassport" width="100%"></td></tr>
+								<tr><td><div id="checklicense" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Driver's License:</b></td><td> <input type="text" id="fieldlicense" width="100%"></td></tr>
+								<tr><td><div id="checkpassword" class="check"><img src="Images/check.png" class="checkimage"></div></td><td><b>Password Changed:</b></td><td id="fieldPassChanged"> </td></tr>					
+							</table>
 							<input type="submit" value="submit" onclick="submitFields()">
 						</div>
         </div>
