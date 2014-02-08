@@ -24,41 +24,56 @@ h2:hover{
     top:60px;
     border-radius:5px;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #textsBox{
     overflow-y: scroll;
     height: 350px;
-    width: 350px;
+    width: 96%;
     border: thin solid black;
     position: relative;
     left:10px;
 }
 
 .bubble{
-    margin: 2px;
-    padding: 2px;
-    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
     height: auto;
     overflow-x: hidden;
 }
 
 #bubbleRight{
-    width: 100px;
-    border: thin solid black;
-    float: right;
+    background-color:blue;
+    width: auto;
+    color:white;
+    text-align:right;
+    clear:both;
+    float:right;
+    display:block;
+    position:relative;
+
 }
 
 #bubbleLeft{
-    border: thin solid black;
-    width: 100px;
-    float: left;
+    background-color:blue;
+    color:white;
+    width: auto;
+    clear:both;
+    float:left;
+    display:block;
+    position:relative;
 }
 
 #loadingImage{
     border-radius:15px;
     height:30px;
-    float: left;
+    clear:both;
+    float:left;
+    display:block;
+    position:relative;
+
 }
 
 #contact{
@@ -70,15 +85,14 @@ h2:hover{
 .textMessage{
     position:relative;
     left:10px;
-    width:345px;
-    height:40px;
     top:5px;
+    width: 95%;
 }
 
 .send{
     position:relative;
-    left:315px;
-    top:8px;
+    float:right;
+    top:5px;
 }
 
 #profile {
@@ -216,4 +230,31 @@ h2:hover{
 	width: 75px;
 	height: 75px;
 	padding: 4px;
+}
+
+.amazonbutton{
+	width:370px;
+	height:70px;
+	font-size:200%;
+	text-align:center;
+}
+
+.backbutton{
+	width:370px;
+	height:70px;
+	font-size:150%;
+}
+
+.orderinfo{
+	width:370px;
+	height:100px;
+}
+
+tr:hover{
+    color:#008cba;
+    cursor:pointer;
+}
+
+th{
+    color:#008cba;
 }
