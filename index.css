@@ -196,9 +196,20 @@ h2:hover{
 
 #passlock{
     position:relative;
-    top:98px;
-    width:324px;
-    right:320px;
+    bottom: 65px;
+    width:353px;
+    left:01px;
+    background-color:Snow;
+    z-index: 1;
+}
+
+#about{
+    position: relative; 
+    top:01px;
+    width: 350px;
+    left:01px;
+     z-index: 2;
+
 }
 
 .photo{
