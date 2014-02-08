@@ -18,4 +18,14 @@ function gPlusScreen(){
 
 }
 
-gPlusScreen();
+function settingsScreen(){
+
+    $("#screen").html("<a href='setting-about.html'><img id='about' src='Images/iphone-general-settings.gif' align='left'/><a href='settings-passlock'><img id='passlock' src='Images/settings.gif'/>");
+
+}
+
+function photosScreen(){
+
+    $("#screen").html("<table><tr><td><img src='photos/1.jpg'><td><img src='photos/2.jpg'><td><img src='photos/3.jpg'></tr><tr><td><img src='photos/4.jpg'><td><img src='photos/5.jpg'><td><img src='photos/6.jpg'></tr><tr><td><img src='photos/7.jpg'><td><img src='photos/8.jpg'><td><img src='photos/9.jpg'></tr></table>");
+}
+photosScreen();
