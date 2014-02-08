@@ -1,3 +1,17 @@
+var notes = new Array();
+notes[0]="aaaaaaaaaaaaa";
+notes[1]="Go shopping<br>Watch TV<br>Fall in love";
+notes[2]="Mitt Romney";
+notes[3]="Amazon: monkey";
+notes[4]="Infinite Jest";
+notes[5]="";
+notes[6]="Kevin Durant is beautiful";
+notes[7]="Eggs, butter, sour patches";
+
+function displayNote(noteNum) {
+	$("#screen").html("<div class='backbutton' onclick='notesScreen()'>Back</div><br>"+notes[noteNum]);
+}
+
 function textScreen(){
     $("#screen").html("<h1 id='contact'>Mom</h1><div id='textsBox'></div><input type='text' name='textMessage' class='textMessage' autocomplete='off'><button class='send'>Send</button>");
 }
@@ -54,7 +68,10 @@ function viewOrder(orderNum) {
 
 function boaScreen(){
     $("#screen").html("<div id='strip'></div><div id='boa'><img src=\"Images/boa_logo.png\" width=\"100%\"><center><h1>Hello<i>, "+name+"</i></h1><h3>Account Number: "+bankAccount+"</h3><h3>Credit Card Number: "+creditCard+"</h3><hr><h3>Savings Account Balance: $10002.39</h3><h3>Checkings Account Balance: $244.34</h3></center></div>");
-
 }
 
-amazonScreen();
+function notesScreen(){
+	$("#screen").html("<div id='sidebar'><div id='note0' class='notebutton' onclick='displayNote(0)'>Wifi Password</div><div id='note1' class='notebutton' onclick='displayNote(1)'>To do list</div><div id='note2' class='notebutton' onclick='displayNote(2)'>My least favorite people</div><div id='note3' class='notebutton' onclick='displayNote(3)'>Passwords</div><div id='note4' class='notebutton' onclick='displayNote(4)'>Books to read</div><div id='note5' class='notebutton' onclick='displayNote(5)'>Dreams</div><div id='note6' class='notebutton' onclick='displayNote(6)'>Basketball</div><div id='note7' class='notebutton' onclick='displayNote(7)'>Groceries</div></div>");
+}
+
+notesScreen();
