@@ -32,11 +32,10 @@ function gmailScreen(){
 }
 
 function gPlusScreen(){
-    $("#screen").html("<div id='screenWrap'><center><img id='profile' src='Images/GooglePlusIcon.jpg' /><img id='background' src='Images/GooglePlusBackground.jpg'/><div class='cont'><div class='box' id='name'></div><br><br></div></center><div id='wrapper'><div class='boxed' id='mystory'><h3 style='margin:0'>About Me</h3><br><b>Tagline</b><br>The kid who never grew up.<br><br><b>Bragging Rights</b><br>Never age, own an island called Neverland, leader of Lost Boys.</div><div class='boxed' id='address'></div><div class='boxed' id='work'></div><div class='boxed' id='contactinfo'></div><div class='boxed' id='basicinfo'></div><div class='boxed' id='school'></div></div><div class='click>Identity Collection</div></div></div>");
+    $("#screen").html("<div id='screenWrap'><center><img id='profile' src='Images/GooglePlusIcon.jpg' /><img id='background' src='Images/GooglePlusBackground.jpg'/><div class='cont'><div class='box' id='name'></div><br><br></div></center><div id='wrapper'><div class='boxed' id='mystory'><h3 style='margin:0'>About Me</h3><br><b>Tagline</b><br>The kid who never grew up.<br><br><b>Bragging Rights</b><br>Never age, own an island called Neverland, leader of Lost Boys.</div><div class='boxed' id='work'></div><div class='boxed' id='contactinfo'></div><div class='boxed' id='basicinfo'></div><div class='boxed' id='school'></div></div><div class='click>Identity Collection</div></div></div>");
 
     $("#name").html("<h2>"+name+"</h2>");
-    $("#address").text("Address: "+address);
-    $("#work").text("Work: "+work);
+    $("#work").html("Work: <br>"+work);
     $("#contactinfo").text("Contact Information: "+phone);
     $("#basicinfo").text("Basic Information: "+birthday);
     $("#school").text("Education: "+school);
