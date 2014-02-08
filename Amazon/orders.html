@@ -5,14 +5,24 @@
 		<title>Orders</title>
 	</head>
 	<body>
-		<p>Order Date: 2/1/2013
-		Recipient: You
-		Items Ordered: some book<a href="order1.html">View Order</a><p>
-		<p>Order Date: 2/1/2013
-		Recipient: You
-		Items Ordered: some book<a href="order1.html">View Order</a><p>
-		<p>Order Date: 2/1/2013
-		Recipient: You
-		Items Ordered: some book<a href="order1.html">View Order</a><p>
+		<div class="backbutton" onclick="amazonScreen()">Back</div>
+		<div class="orderinfo">
+			Order Date: 2/1/2013<br>
+			Recipient: Me<br>
+			Items Ordered: You<br>
+			<div style="color:blue" onclick="viewOrder(1)">View Order</div>
+		</div>
+		<div class="orderinfo">
+			Order Date: 7/4/1776<br>
+			Recipient: King George<br>
+			Items Ordered: George Washington<br>
+			<div style="color:blue" onclick="viewOrder(1)">View Order</div>
+		</div>
+		<div class="orderinfo">
+			Order Date: ------<br>
+			Recipient: Peter Pan<br>
+			Items Ordered: Wendy<br>
+			<div style="color:blue" onclick="viewOrder(1)">View Order</div>
+		</div>
 	</body>
 </html>
