@@ -71,7 +71,7 @@ function openOrders() {
 }
 
 function viewOrder(orderNum) {
-	$("#screen").html("<div class='backbutton' onclick='openOrders()'>Back</div><div>Order Date: 2/1/2013<br>Order #: 22222222<br>Order Total: $333.33<br>Ship To:<br>0 Never Landing<br>Never, Never Land</div>");
+	$("#screen").html("<div class='backbutton' onclick='openOrders()'>Back</div><div>Order Date: 2/1/2013<br>Order #: 22222222<br>Order Total: $333.33<br>Ship To:<br>"+address+"</div>");
 }
 
 function boaScreen(){
