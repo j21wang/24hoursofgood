@@ -22,11 +22,11 @@ function settingsScreen(){
 
     $("#screen").html("<img id='about' src='Images/iphone-general-settings.gif' align='left'/><img id='passlock' src='Images/settings.gif'/>");
     $("#about").click(function(){
-        $("#screen").html("<div class='box' id='Name'></div><div class='box' id='Network'>Network AT&T</div><div class='box' id='Model'>Model M876E2</div><div class='box' id='SerialNumber'>Serial Number FIHUESR38947Y2QY98</div>");
+        $("#screen").html("<div class='boxi' id='Name'></div><div class='boxi' id='Network'>Network: AT&T</div><div class='boxi' id='Model'>Model: M876E2</div><div class='boxi' id='SerialNumber'>Serial Number: FIHUESR38947Y2QY98</div>");
         $("#Name").text("Name: "+name+ "'s Phone");
     });
     $("#passlock").click(function(){
-        $("#screen").html("<div class='box' id='Passlock'>Turn Passlock On</div><div class='box' id='Changepass'>Change Passcode</div>");
+        $("#screen").html("<div class='boxl' id='Passlock'>Turn Passlock On</div><div class='boxl' id='Changepass'>Change Passcode</div>");
     });
 
 }
@@ -57,4 +57,4 @@ function boaScreen(){
 
 }
 
-amazonScreen();
+settingsScreen();
