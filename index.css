@@ -206,3 +206,21 @@ h2:hover{
 	height: 75px;
 	padding: 4px;
 }
+
+.amazonbutton{
+	width:370px;
+	height:70px;
+	font-size:200%;
+	text-align:center;
+}
+
+.backbutton{
+	width:370px;
+	height:70px;
+	font-size:150%;
+}
+
+.orderinfo{
+	width:370px;
+	height:100px;
+}
