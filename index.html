@@ -2,7 +2,7 @@
 <html>
     <head>
         <link href="index.css" type="text/css" rel="stylesheet"></link>
-        <link href='http://fonts.googleapis.com/css?family=Balthazar' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
 				<style type="text/css">
 					.appicon {
 						width:115px;
@@ -18,12 +18,16 @@
 					#submitFields {
 						display:none; 
 						position:absolute; 
-						top:110px; left:60px; 
-						height:400px; 
+						top:130px; left:50px; 
+						height:75%; 
 						width:300px; 
 						border:1px solid black;
 						background-color:white;
+                        padding:10px;
 					}
+
+                    input{
+                    }
 				</style>
         <script src="jquery.js"></script>
         <script src="variables.js"></script>
@@ -45,7 +49,11 @@
 
 					function loadHome()
 					{
-						var homestr = '<table><tr><td><img onclick="gPlusScreen()" src="Images/g+.jpg" class="appicon"></td>' +
+						if (fieldsDivVisible) {
+							document.getElementById("submitFields").style.display="none";
+							fieldsDivVisible = false;
+						}
+						var homestr = '<table><tr><td><img onclick="gPlusScreen()" src="Images/g+.png" class="appicon"></td>' +
 																			'<td><img onclick="gmailScreen()" src="Images/gmail.png" class="appicon"></td>' +
 																			'<td><img onclick="boaScreen()" src="Images/boa.jpg" class="appicon"></td></tr><tr>' + 
 																			'<td><img onclick="amazonScreen()" src="Images/amazon.png" class="appicon"></td>' + 
